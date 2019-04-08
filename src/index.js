@@ -1,6 +1,7 @@
 import names from './constants/names'
 import namesLower from './constants/namesLower'
 import symbols from './constants/symbols'
+import { __esModule } from '../dist'
 
 const crypto = {
 	symbol(name) {
@@ -18,4 +19,4 @@ const crypto = {
 	},
 }
 
-export default crypto
+module.exports = crypto
