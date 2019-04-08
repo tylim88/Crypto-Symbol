@@ -1,3 +1,7 @@
+v 0.0.8
+
+- fix typo in readme
+
 v 0.0.7
 
 - remove unnecessary import

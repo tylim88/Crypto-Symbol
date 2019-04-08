@@ -15,7 +15,7 @@ npm i crypto-symbol
 ## Usage
 
 ```
-const crypto = require('./dist/index')
+const crypto = require('crypto-symbol')
 
 // case insensitive search
 console.log(crypto.symbol('liTecoin')) // "LTC"
