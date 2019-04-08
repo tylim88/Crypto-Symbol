@@ -1,0 +1,33 @@
+{
+	"name": "crypto-symbol-name",
+	"version": "0.0.0",
+	"description": "Provide easy conversion between crypto symbol and name",
+	"main": "dist/index.js",
+	"scripts": {
+		"build": "babel src --out-dir dist --copy-files",
+		"test": "babel-node test.js"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/tylim88/Crypto-Symbol-Name.git"
+	},
+	"author": "",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/tylim88/Crypto-Symbol-Name/issues"
+	},
+	"homepage": "https://github.com/tylim88/Crypto-Symbol-Name#readme",
+	"dependencies": {},
+	"babel": {
+		"presets": [
+			"@babel/preset-env"
+		]
+	},
+	"devDependencies": {
+		"@babel/cli": "^7.4.3",
+		"@babel/core": "^7.4.3",
+		"@babel/node": "^7.2.2",
+		"@babel/preset-env": "^7.4.3",
+		"coinmarketcap-api": "^3.0.0"
+	}
+}
