@@ -21,9 +21,13 @@ const crypto = require('./dist/index')
 console.log(crypto.symbol('liTecoin')) // "LTC"
 console.log(crypto.name('lTc')) // "Litecoin"
 
-//-------------------------------------//
+```
+
+Another way to use it
+
+```
 const { crypto } = require('./dist/index')
 
 // less verbose but less efficient
-console.log(crypto('liTecoin'), crypto('lTc'))
+console.log(crypto('liTecoin'), crypto('lTc')) //"LTC Litecoin"
 ```
