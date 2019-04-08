@@ -3,18 +3,26 @@ import namesLower from './constants/namesLower'
 import symbols from './constants/symbols'
 import { __esModule } from '../dist'
 
+const symbol_ = name => {
+	return symbols[namesLower.indexOf(name.toLowerCase())]
+}
+
+const name_ = symbol => {
+	return names[symbols.indexOf(symbol.toUpperCase())]
+}
+
 const crypto = {
 	symbol(name) {
-		return symbols[namesLower.indexOf(name.toLowerCase())]
+		return symbol_(name)
 	},
 	name(symbol) {
-		return names[symbols.indexOf(symbol.toUpperCase())]
+		return name_(symbol)
 	},
 	crypto(string) {
 		if (string.length > 4) {
-			return this.symbol(string) || this.name(string)
+			return symbol_(string) || name_(string)
 		} else {
-			return this.name(string) || this.symbol(string)
+			return name_(string) || symbol_(string)
 		}
 	},
 }
