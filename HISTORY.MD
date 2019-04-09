@@ -1,3 +1,8 @@
+v 0.1.0
+
+- apply memoization for faster lookup
+- imporve readme
+
 v 0.0.8
 
 - fix typo in readme

@@ -1,8 +1,35 @@
-// const crypto = require('./dist/index')
+const {
+	symbol,
+	name,
+	crypto,
+	symbolM,
+	nameM,
+	cryptoM,
+} = require('./dist/index')
 
-// console.log(crypto.symbol('liTecoin'), crypto.name('lTc'))
-// console.log(crypto.crypto('liTecoin'), crypto.crypto('lTc'))
+const { performance } = require('perf_hooks')
 
-const { crypto } = require('./dist/index')
+var t0 = performance.now()
+// case insensitive search
+console.log(symbol('liTecoin')) // "LTC"
+console.log(name('lTc')) // "Litecoin"
+// less verbose but less efficient
+console.log(crypto('liTecoin'), crypto('lTc')) //"LTC Litecoin"
+var t1 = performance.now()
+console.log(t1 - t0)
 
-console.log(crypto('liTecoin'), crypto('lTc'))
+var t2 = performance.now()
+// memoization
+console.log(symbolM('liTecoin')) // "LTC"
+console.log(nameM('lTc')) // "Litecoin"
+console.log(cryptoM('liTecoin'), cryptoM('lTc')) //"LTC Litecoin"
+var t3 = performance.now()
+console.log(t3 - t2)
+
+var t3 = performance.now()
+// memoization
+console.log(symbolM('liTecoin')) // "LTC"
+console.log(nameM('lTc')) // "Litecoin"
+console.log(cryptoM('liTecoin'), cryptoM('lTc')) //"LTC Litecoin"
+var t4 = performance.now()
+console.log(t4 - t3)

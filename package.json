@@ -1,11 +1,12 @@
 {
 	"name": "crypto-symbol",
-	"version": "0.0.8",
+	"version": "0.1.0",
 	"description": "Provide easy conversion between crypto symbol and name",
 	"main": "dist/index.js",
 	"scripts": {
 		"build": "babel src --out-dir dist --copy-files",
-		"test": "babel-node test.js"
+		"test": "babel-node test.js",
+		"test2": "babel-node src/index.js"
 	},
 	"repository": {
 		"type": "git",

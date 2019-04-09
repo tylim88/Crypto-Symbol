@@ -15,19 +15,17 @@ npm i crypto-symbol
 ## Usage
 
 ```
-const crypto = require('crypto-symbol')
+const {symbol, name, crypto,symbolM, nameM, cryptoM,} = require('crypto-symbol')
 
 // case insensitive search
-console.log(crypto.symbol('liTecoin')) // "LTC"
-console.log(crypto.name('lTc')) // "Litecoin"
-
-```
-
-Another way to use it
-
-```
-const { crypto } = require('./dist/index')
-
+console.log(symbol('liTecoin')) // "LTC"
+console.log(name('lTc')) // "Litecoin"
 // less verbose but less efficient
 console.log(crypto('liTecoin'), crypto('lTc')) //"LTC Litecoin"
+
+
+// memoization, consume more memory but much faster lookup
+console.log(symbolM('liTecoin')) // "LTC"
+console.log(nameM('lTc')) // "Litecoin"
+console.log(cryptoM('liTecoin'), cryptoM('lTc')) //"LTC Litecoin"
 ```
