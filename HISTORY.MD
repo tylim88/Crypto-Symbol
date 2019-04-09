@@ -1,3 +1,8 @@
+v 0.1.3
+
+- remove nameLower.js reduce library size
+- add extra pair not available on coinmarketcap
+
 v 0.1.2
 
 - update package json keyword

@@ -1,6 +1,7 @@
 import names from './constants/names'
-import namesLower from './constants/namesLower'
 import symbols from './constants/symbols'
+
+const namesLower = names.map(name => name.toLowerCase())
 
 const symbol_ = name =>
 	symbols[namesLower.indexOf(name.replace(/[^a-zA-Z0-9 ]/g, '').toLowerCase())]

@@ -2157,4 +2157,13 @@ const names = [
 	'Contents Protocol',
 	'OOOBTC TOKE',
 ]
-export default names
+
+const names2 = [
+	'YOYO',
+	'MIOTA',
+	'GXSChain',
+	'Bitcoin Cash ABC',
+	'Bitcoin Cash SV',
+	'Eth0s',
+]
+export default [...names, ...names2]

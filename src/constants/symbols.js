@@ -2154,4 +2154,6 @@ const symbols = [
 	'VIDT',
 	'VBK',
 ]
-export default symbols
+
+const symbols2 = ['YOYO', 'IOTA', 'GXS', 'BCHABC', 'BCHSV', 'BQX']
+export default [...symbols, ...symbols2]
