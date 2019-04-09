@@ -1,4 +1,4 @@
-# Crypto-Symbol-Name
+# Crypto-Symbol
 
 Provide easy conversion between crypto symbol and name
 

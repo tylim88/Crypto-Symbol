@@ -1,3 +1,8 @@
+v 0.1.2
+
+- update package json keyword
+- update readme
+
 v 0.1.1
 
 - keep the number in name if any

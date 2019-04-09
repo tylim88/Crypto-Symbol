@@ -1,6 +1,6 @@
 {
 	"name": "crypto-symbol",
-	"version": "0.1.1",
+	"version": "0.1.2",
 	"description": "Provide easy conversion between crypto symbol and name",
 	"main": "dist/index.js",
 	"scripts": {
@@ -18,6 +18,15 @@
 		"url": "https://github.com/tylim88/Crypto-Symbol-Name/issues"
 	},
 	"homepage": "https://github.com/tylim88/Crypto-Symbol-Name#readme",
+	"keywords": [
+		"crypto",
+		"name",
+		"symbol",
+		"Bitcoin",
+		"Ethereum",
+		"cryptoCurrency",
+		"currency"
+	],
 	"dependencies": {},
 	"babel": {
 		"presets": [
