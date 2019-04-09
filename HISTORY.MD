@@ -1,3 +1,8 @@
+v 0.1.1
+
+- keep the number in name if any
+- update readme
+
 v 0.1.0
 
 - apply memoization for faster lookup
