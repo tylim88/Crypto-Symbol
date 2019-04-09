@@ -1399,7 +1399,7 @@ const symbols = [
 	'VIKKY',
 	'FOXT',
 	'RTB',
-	'TOLL',
+	'BRDG',
 	'GVE',
 	'LCS',
 	'ZPR',
@@ -2148,12 +2148,16 @@ const symbols = [
 	'HOT',
 	'HLT',
 	'XRC',
+	'FST',
 	'XLB',
 	'CSP',
 	'BOLT',
 	'VIDT',
 	'VBK',
+	'CPT',
+	'OBX',
 ]
 
 const symbols2 = ['YOYO', 'IOTA', 'GXS', 'BCHABC', 'BCHSV', 'BQX']
+
 export default [...symbols, ...symbols2]

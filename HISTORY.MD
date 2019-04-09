@@ -1,3 +1,7 @@
+v 0.1.4
+
+- fix missing symbol
+
 v 0.1.3
 
 - remove nameLower.js reduce library size
