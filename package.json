@@ -1,6 +1,6 @@
 {
 	"name": "crypto-symbol",
-	"version": "0.1.4",
+	"version": "0.1.5",
 	"description": "Provide easy conversion between crypto symbol and name",
 	"main": "dist/index.js",
 	"scripts": {
@@ -10,14 +10,14 @@
 	},
 	"repository": {
 		"type": "git",
-		"url": "git+https://github.com/tylim88/Crypto-Symbol-Name.git"
+		"url": "git+https://github.com/tylim88/Crypto-Symbol.git"
 	},
 	"author": "",
 	"license": "ISC",
 	"bugs": {
-		"url": "https://github.com/tylim88/Crypto-Symbol-Name/issues"
+		"url": "https://github.com/tylim88/Crypto-Symbol/issues"
 	},
-	"homepage": "https://github.com/tylim88/Crypto-Symbol-Name#readme",
+	"homepage": "https://github.com/tylim88/Crypto-Symbol#readme",
 	"keywords": [
 		"crypto",
 		"name",
