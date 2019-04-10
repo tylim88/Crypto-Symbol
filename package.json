@@ -6,7 +6,7 @@
 	"scripts": {
 		"build": "babel src --out-dir dist --copy-files",
 		"test": "npm run build && babel-node test.js",
-		"bTest": "npm run build && babel-node test.js"
+		"bTest": "npm run build && npm run test"
 	},
 	"repository": {
 		"type": "git",
