@@ -1,3 +1,7 @@
+v 0.1.6
+
+- housekeeping code and scripts
+
 v 0.1.5
 
 - update link
