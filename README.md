@@ -4,7 +4,7 @@ Provide easy conversion between crypto symbol and name
 
 Source: https://coinmarketcap.com/all/views/all/
 
-last updated: 09-Apr-19
+last updated: 10-Apr-19
 
 ## Installation
 

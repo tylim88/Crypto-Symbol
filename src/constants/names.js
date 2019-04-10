@@ -2161,9 +2161,9 @@ const names = [
 const names2 = [
 	'YOYO',
 	'MIOTA',
-	'GXSChain',
+	'GXChain ',
 	'Bitcoin Cash ABC',
 	'Bitcoin Cash SV',
-	'Eth0s',
+	'Ethos ',
 ]
 export default [...names, ...names2]

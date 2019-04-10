@@ -1,3 +1,7 @@
+v 0.1.7
+
+- slightly improve naming
+
 v 0.1.6
 
 - housekeeping code and scripts
