@@ -3,8 +3,10 @@ import symbols from './constants/symbols'
 
 const namesLower = names.map(name => name.toLowerCase())
 
-const symbol_ = name =>
-	symbols[namesLower.indexOf(name.replace(/[^a-zA-Z0-9 ]/g, '').toLowerCase())]
+const removerSpecialChar = name =>
+	name.replace(/[^a-zA-Z0-9 ]/g, '').toLowerCase()
+
+const symbol_ = name => symbols[namesLower.indexOf(removerSpecialChar(name))]
 
 const name_ = symbol => names[symbols.indexOf(symbol.toUpperCase())]
 
@@ -19,8 +21,7 @@ symbols.forEach((symbol, i) => {
 })
 
 const symbolM_ = name =>
-	symbol[name] ||
-	(symbol[name] = symbol[name.replace(/[^a-zA-Z0-9 ]/g, '').toLowerCase()])
+	symbol[name] || (symbol[name] = symbol[removerSpecialChar(name)])
 
 const nameM_ = symbol =>
 	name[symbol] || (name[symbol] = name[symbol.toUpperCase()])
