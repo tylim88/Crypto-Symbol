@@ -33,7 +33,8 @@ Memoization (highly recommended)
 ```
 const {symbolM, nameM, cryptoM} = require('crypto-symbol')
 
-// consume more memory(insignificant) but much faster lookup( on my machine it is 800% to 1000% faster than array lookup)
+// consume more memory(insignificant) but much faster lookup
+// 800% to 1000% faster than array lookup on my machine
 console.log(symbolM('liTecoin')) // "LTC"
 console.log(nameM('lTc')) // "Litecoin"
 console.log(cryptoM('liTecoin'), cryptoM('lTc')) //"LTC Litecoin"

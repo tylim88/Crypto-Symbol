@@ -1,3 +1,7 @@
+v 0.1.10
+
+- update readme
+
 v 0.1.9
 
 - fix typo
