@@ -1,3 +1,11 @@
+v 0.1.9
+
+- fix typo
+
+v 0.1.8
+
+- update read me with donation details
+
 v 0.1.7
 
 - slightly improve naming
