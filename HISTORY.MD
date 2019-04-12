@@ -1,3 +1,9 @@
+v 0.1.11
+
+- update readme
+- attach license
+- housekeeping package.json
+
 v 0.1.10
 
 - update readme

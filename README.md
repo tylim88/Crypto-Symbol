@@ -6,7 +6,7 @@ Source: https://coinmarketcap.com/all/views/all/
 
 last update: 10-Apr-19
 
-Written in ES6
+Written in ES6 and compiled to ES5
 
 ## Installation
 

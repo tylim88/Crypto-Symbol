@@ -5,7 +5,7 @@
 	"main": "dist/index.js",
 	"scripts": {
 		"build": "babel src --out-dir dist --copy-files",
-		"test": "npm run build && babel-node test.js",
+		"test": "babel-node test.js",
 		"btest": "npm run build && npm run test"
 	},
 	"repository": {
