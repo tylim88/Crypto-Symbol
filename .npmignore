@@ -1,6 +1,7 @@
 exp.js
 test.js
 HISTORY.MD
+/.github
 /node_modules
 /src
 package-lock.json
