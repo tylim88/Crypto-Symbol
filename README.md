@@ -42,7 +42,7 @@ console.log(cryptoM('liTecoin'), cryptoM('lTc')) //"LTC Litecoin"
 
 ## Tips & Star
 
-consider star or tipping me if you like this small and useful library, and wish to see more rapid continuous development 😄
+consider star or tipping me if you like this small and useful library, and wish to see more rapid development 😄
 
 BTC: 1KbpCqzZ6FSfoi1R9obGEVXRHpbJMQQCda  
 ETH: 0x4DfD790D98F8f3E013E70da51E70B60b953c7e61  

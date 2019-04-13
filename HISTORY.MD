@@ -1,4 +1,8 @@
-v 0.1..12
+v 0.1.13
+
+- update readme
+
+v 0.1.12
 
 - update readme
 
