@@ -2,15 +2,17 @@
 
 🐤 Provide easy conversion between crypto symbol and name
 
-Source: https://coinmarketcap.com/all/views/all/
+📔 Source: [CoinMarketCap](https://coinmarketcap.com/all/views/all/)
 
-last update: 10-Apr-19
+🏗 Also compatible with Binance
 
-Written in ES6 and compiled to ES5
+6️⃣ Written in ES6 and compiled to ES5
+
+🆙 last update: 10-Apr-19
 
 ## Installation
 
-```
+```bash
 npm i crypto-symbol
 ```
 
@@ -18,7 +20,7 @@ npm i crypto-symbol
 
 ✍️ Normal Usage
 
-```
+```js
 const {symbol, name} = require('crypto-symbol')
 
 // case insensitive search
@@ -28,7 +30,7 @@ console.log(name('lTc')) // "Litecoin"
 
 ⚡️ Memoization (highly recommended)
 
-```
+```js
 const {symbolM, nameM} = require('crypto-symbol')
 
 // consume more memory(insignificant) but much faster lookup
@@ -39,7 +41,7 @@ console.log(nameM('lTc')) // "Litecoin"
 
 📔 Get Symbol and Name array
 
-```
+```js
 const {symbols, names} = require('crypto-symbol')
 
 console.log(symbols) // ['BTC',	'LTC'...]
@@ -50,7 +52,7 @@ console.log(names) // ['Bitcoin', 'Litecoin'....]
 
 ⚠️ Api that still available but no longer recommended
 
-```
+```js
 const {crypto, cryptoM} = require('crypto-symbol')
 
 console.log(crypto('liTecoin'), crypto('lTc')) //"LTC Litecoin"
