@@ -2,6 +2,10 @@
 
 Change log
 
+## 0.2.3
+
+- update readme
+
 ## 0.2.2
 
 - update license

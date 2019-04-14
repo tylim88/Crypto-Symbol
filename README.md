@@ -39,7 +39,7 @@ console.log(symbolM('liTecoin')) // "LTC"
 console.log(nameM('lTc')) // "Litecoin"
 ```
 
-📔 Get Symbol and Name array
+📚 Get Symbol and Name array
 
 ```js
 const {symbols, names} = require('crypto-symbol')
