@@ -2,6 +2,10 @@
 
 Change log
 
+## 0.2.5
+
+- update readme
+
 ## 0.2.4
 
 - update readme

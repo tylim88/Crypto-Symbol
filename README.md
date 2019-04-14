@@ -4,8 +4,6 @@
 
 📔 Source: [CoinMarketCap](https://coinmarketcap.com/all/views/all/)
 
-🏗 Fully compatible with [Binance](https://www.binance.com/)
-
 ✍️ Written in ES6️⃣ and compiled to ES5️⃣
 
 🆙 last update: 10-Apr-19
