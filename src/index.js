@@ -41,6 +41,10 @@ const crypto = {
 
 	symbolM: name => symbolM_(name),
 
+	symbols,
+
+	names,
+
 	nameM: symbol => nameM_(symbol),
 
 	cryptoM: string => crypto_(string, symbolM_, nameM_),

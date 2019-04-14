@@ -1,3 +1,8 @@
+v 0.2.0
+
+- update readme
+- expose arrays
+
 v 0.1.13
 
 - update readme

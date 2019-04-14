@@ -19,24 +19,41 @@ npm i crypto-symbol
 Normal Usage
 
 ```
-const {symbol, name, crypto} = require('crypto-symbol')
+const {symbol, name} = require('crypto-symbol')
 
 // case insensitive search
 console.log(symbol('liTecoin')) // "LTC"
 console.log(name('lTc')) // "Litecoin"
-// less verbose but less efficient
-console.log(crypto('liTecoin'), crypto('lTc')) //"LTC Litecoin"
 ```
 
 Memoization (highly recommended)
 
 ```
-const {symbolM, nameM, cryptoM} = require('crypto-symbol')
+const {symbolM, nameM} = require('crypto-symbol')
 
 // consume more memory(insignificant) but much faster lookup
 // 800% to 1000% faster than array lookup on my machine
 console.log(symbolM('liTecoin')) // "LTC"
 console.log(nameM('lTc')) // "Litecoin"
+```
+
+Get Symbol and Name array
+
+```
+const {symbols, names} = require('crypto-symbol')
+
+console.log(symbols) // ['BTC',	'LTC'...]
+console.log(names) // ['Bitcoin', 'Litecoin'....]
+```
+
+## Depreciated
+
+// api that still available but no longer recommended
+
+```
+const {crypto, cryptoM} = require('crypto-symbol')
+
+console.log(crypto('liTecoin'), crypto('lTc')) //"LTC Litecoin"
 console.log(cryptoM('liTecoin'), cryptoM('lTc')) //"LTC Litecoin"
 ```
 

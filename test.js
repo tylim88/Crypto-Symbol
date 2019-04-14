@@ -5,6 +5,8 @@ const {
 	symbolM,
 	nameM,
 	cryptoM,
+	symbols,
+	names,
 } = require('./dist/index')
 
 const { performance } = require('perf_hooks')
@@ -33,3 +35,5 @@ console.log(nameM('lTc')) // "Litecoin"
 console.log(cryptoM('liTecoin'), cryptoM('lTc')) //"LTC Litecoin"
 var t4 = performance.now()
 console.log(t4 - t3)
+
+console.log(symbols.length, names.length)
