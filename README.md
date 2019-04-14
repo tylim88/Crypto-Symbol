@@ -67,4 +67,4 @@ LTC: `LXVYLpe9zQ48aGCuBqjLW8xxaBfVBauXST`
 XRP: `rnftUYRq91TBL6ceK5y3UnFiYBLQMFkZn6`  
 ADA: `Ae2tdPwUPEYxapgJjg9qpg1RhyfBq5vx6ZdWXafNqZihg4rCD7baXhMf7CH`  
 BNB: `0x4DfD790D98F8f3E013E70da51E70B60b953c7e61`  
-[PayPal](https://www.paypal.me/tylim88){:target="_blank"}
+[PayPal](https://www.paypal.me/tylim88)
