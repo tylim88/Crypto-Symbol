@@ -1,6 +1,6 @@
 # Crypto-Symbol
 
-Provide easy conversion between crypto symbol and name
+🐤 Provide easy conversion between crypto symbol and name
 
 Source: https://coinmarketcap.com/all/views/all/
 
@@ -16,7 +16,7 @@ npm i crypto-symbol
 
 ## Usage
 
-Normal Usage
+✍️ Normal Usage
 
 ```
 const {symbol, name} = require('crypto-symbol')
@@ -26,7 +26,7 @@ console.log(symbol('liTecoin')) // "LTC"
 console.log(name('lTc')) // "Litecoin"
 ```
 
-Memoization (highly recommended)
+⚡️ Memoization (highly recommended)
 
 ```
 const {symbolM, nameM} = require('crypto-symbol')
@@ -37,7 +37,7 @@ console.log(symbolM('liTecoin')) // "LTC"
 console.log(nameM('lTc')) // "Litecoin"
 ```
 
-Get Symbol and Name array
+📔 Get Symbol and Name array
 
 ```
 const {symbols, names} = require('crypto-symbol')
@@ -48,7 +48,7 @@ console.log(names) // ['Bitcoin', 'Litecoin'....]
 
 ## Depreciated
 
-// api that still available but no longer recommended
+⚠️ Api that still available but no longer recommended
 
 ```
 const {crypto, cryptoM} = require('crypto-symbol')
@@ -59,12 +59,12 @@ console.log(cryptoM('liTecoin'), cryptoM('lTc')) //"LTC Litecoin"
 
 ## Tips & Star
 
-consider star or tipping me if you like this small and useful library, and wish to see more rapid development 😄
+😄 consider star or tipping me if you like this small and useful library, and wish to see more rapid development
 
-BTC: 1KbpCqzZ6FSfoi1R9obGEVXRHpbJMQQCda  
-ETH: 0x4DfD790D98F8f3E013E70da51E70B60b953c7e61  
-LTC: LXVYLpe9zQ48aGCuBqjLW8xxaBfVBauXST  
-XRP: rnftUYRq91TBL6ceK5y3UnFiYBLQMFkZn6  
-ADA: Ae2tdPwUPEYxapgJjg9qpg1RhyfBq5vx6ZdWXafNqZihg4rCD7baXhMf7CH  
-BNB: 0x4DfD790D98F8f3E013E70da51E70B60b953c7e61  
-paypal: paypal.me/tylim88
+BTC: `1KbpCqzZ6FSfoi1R9obGEVXRHpbJMQQCda`  
+ETH: `0x4DfD790D98F8f3E013E70da51E70B60b953c7e61`  
+LTC: `LXVYLpe9zQ48aGCuBqjLW8xxaBfVBauXST`  
+XRP: `rnftUYRq91TBL6ceK5y3UnFiYBLQMFkZn6`  
+ADA: `Ae2tdPwUPEYxapgJjg9qpg1RhyfBq5vx6ZdWXafNqZihg4rCD7baXhMf7CH`  
+BNB: `0x4DfD790D98F8f3E013E70da51E70B60b953c7e61`  
+[PayPal](https://www.paypal.me/tylim88){:target="_blank"}
