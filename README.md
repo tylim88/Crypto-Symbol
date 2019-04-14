@@ -4,9 +4,9 @@
 
 📔 Source: [CoinMarketCap](https://coinmarketcap.com/all/views/all/)
 
-🏗 Also compatible with Binance
+🏗 Fully compatible with [Binance](https://www.binance.com/)
 
-6️⃣ Written in ES6 and compiled to ES5
+✍️ Written in ES6️⃣ and compiled to ES5️⃣
 
 🆙 last update: 10-Apr-19
 
@@ -18,7 +18,7 @@ npm i crypto-symbol
 
 ## Usage
 
-✍️ Normal Usage
+🎐 Normal Usage
 
 ```js
 const {symbol, name} = require('crypto-symbol')
