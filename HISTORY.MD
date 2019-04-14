@@ -2,6 +2,10 @@
 
 Change log
 
+## 0.2.2
+
+- update license
+
 ## 0.2.1
 
 - add emoji in readme
