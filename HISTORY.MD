@@ -2,6 +2,10 @@
 
 Change log
 
+## 0.3.1 27 July 2020
+
+- remove certain update in readMe to avoid confusion
+
 ## 0.3.0 27 July 2020
 
 - update the name and symbol to the latest

@@ -8,20 +8,11 @@
 
 🆙 last update: 27-July-20
 
-## Announcement 1
+## Announcement 
 
 version 0.3 update the name and symbol to the latest of coinmarketcap
 
-## Announcement 2
-
-due to increase download of this package (which is unexpected), I decided to continue the work on this library, starting from v 1.0 in future:
-
-- no more array search, only object lookup  
-- due to the improvement above, expect the depreciation of `symbolM` and `nameM` (because they are no longer needed, but you still can use them)
-- api to add custom name and symbol
-- typescript support
-- more comprehensive test
-- CI/CD
+due to increase download of this package (which is unexpected), I decided to continue the work on this library, expect better library in near future.
 
 ## Installation
 
