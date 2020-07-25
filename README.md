@@ -8,7 +8,7 @@
 
 🆙 last update: 27-July-20
 
-## Announcement 
+## Announcement
 
 version 0.3 update the name and symbol to the latest of coinmarketcap
 
@@ -25,7 +25,7 @@ npm i crypto-symbol
 🎐 Normal Usage
 
 ```js
-const {symbol, name} = require('crypto-symbol')
+const { symbol, name } = require('crypto-symbol')
 
 // case insensitive search
 console.log(symbol('liTecoin')) // "LTC"
@@ -35,7 +35,7 @@ console.log(name('lTc')) // "Litecoin"
 ⚡️ Memoization (highly recommended)
 
 ```js
-const {symbolM, nameM} = require('crypto-symbol')
+const { symbolM, nameM } = require('crypto-symbol')
 
 // consume more memory(insignificant) but much faster lookup
 // 800% to 1000% faster than array lookup on my machine
@@ -46,9 +46,9 @@ console.log(nameM('lTc')) // "Litecoin"
 📚 Get Symbol and Name array
 
 ```js
-const {symbols, names} = require('crypto-symbol')
+const { symbols, names } = require('crypto-symbol')
 
-console.log(symbols) // ['BTC',	'LTC'...]
+console.log(symbols) // ['BTC','LTC'...]
 console.log(names) // ['Bitcoin', 'Litecoin'....]
 ```
 
@@ -57,7 +57,7 @@ console.log(names) // ['Bitcoin', 'Litecoin'....]
 ⚠️ Api that still available but no longer recommended
 
 ```js
-const {crypto, cryptoM} = require('crypto-symbol')
+const { crypto, cryptoM } = require('crypto-symbol')
 
 console.log(crypto('liTecoin'), crypto('lTc')) //"LTC Litecoin"
 console.log(cryptoM('liTecoin'), cryptoM('lTc')) //"LTC Litecoin"

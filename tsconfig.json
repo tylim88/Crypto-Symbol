@@ -1,0 +1,22 @@
+{
+	"compilerOptions": {
+		"isolatedModules": true,
+		"module": "commonjs",
+		"declaration": true,
+		"esModuleInterop": true,
+		"outDir": "dist",
+		"sourceMap": true,
+		"noImplicitAny": true,
+		"forceConsistentCasingInFileNames": true,
+		"strict": true,
+		"target": "esNext",
+		"allowJs": true,
+		"baseUrl": "src",
+		"noEmit": true,
+		"paths": {
+			"*": ["*"]
+		},
+		"typeRoots": ["./node_modules/@types"]
+	},
+	"include": ["src/**/*"]
+}

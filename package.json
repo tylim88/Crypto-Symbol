@@ -1,12 +1,14 @@
 {
 	"name": "crypto-symbol",
-	"version": "0.3.1",
+	"version": "1.0.0",
 	"description": "Provide easy conversion between crypto symbol and name",
 	"main": "dist/index.js",
 	"scripts": {
+		"tsc": "tsc --p tsconfig.json",
+		"lint": "eslint ./**/*.{ts,md} ",
+		"lint-fix": "eslint ./**/*.{ts,md} --fix",
 		"build": "babel src --out-dir dist --copy-files",
-		"test": "babel-node test.js",
-		"btest": "npm run build && npm run test"
+		"test": "jest"
 	},
 	"repository": {
 		"type": "git",
@@ -31,13 +33,130 @@
 	"dependencies": {},
 	"babel": {
 		"presets": [
-			"@babel/preset-env"
+			"@babel/preset-env",
+			"@babel/preset-typescript"
+		],
+		"plugins": [
+			[
+				"babel-plugin-root-import",
+				{
+					"rootPathSuffix": "./src",
+					"rootPathPrefix": ""
+				}
+			]
 		]
 	},
 	"devDependencies": {
 		"@babel/cli": "^7.4.3",
 		"@babel/core": "^7.4.3",
 		"@babel/node": "^7.2.2",
-		"@babel/preset-env": "^7.4.3"
-	}
+		"@babel/preset-env": "^7.4.3",
+		"@babel/preset-typescript": "^7.10.4",
+		"@types/jest": "^26.0.7",
+		"@typescript-eslint/eslint-plugin": "^3.7.0",
+		"@typescript-eslint/parser": "^3.7.0",
+		"babel-plugin-root-import": "^6.5.0",
+		"eslint": "^7.5.0",
+		"eslint-cli": "^1.1.1",
+		"eslint-config-prettier": "^6.11.0",
+		"eslint-plugin-markdown": "^1.0.2",
+		"eslint-plugin-md": "^1.0.16",
+		"eslint-plugin-prettier": "^3.1.4",
+		"husky": "^4.2.5",
+		"jest": "^26.1.0",
+		"jsdoc": "^3.6.5",
+		"lint-staged": "^10.2.11",
+		"prettier": "^2.0.5",
+		"ts-jest": "^26.1.3",
+		"typescript": "^3.9.7"
+	},
+	"husky": {
+		"hooks": {
+			"pre-commit": "lint-staged"
+		}
+	},
+	"lint-staged": {
+		"*.{ts,md}": [
+			"npm run tsc",
+			"npm run lint --fix",
+			"prettier --write"
+		]
+	},
+	"prettier": {
+		"arrowParens": "avoid",
+		"singleQuote": true,
+		"jsxSingleQuote": true,
+		"trailingComma": "es5",
+		"semi": false,
+		"useTabs": true,
+		"endOfLine": "auto"
+	},
+	"eslintConfig": {
+		"env": {
+			"node": true,
+			"es6": true
+		},
+		"settings": {
+			"import/resolver": {
+				"node": {
+					"moduleDirectory": [
+						"node_modules",
+						"src/"
+					]
+				}
+			}
+		},
+		"parserOptions": {
+			"sourceType": "module"
+		},
+		"plugins": [
+			"prettier",
+			"markdown",
+			"@typescript-eslint"
+		],
+		"overrides": [
+			{
+				"files": [
+					"*.js"
+				],
+				"extends": [
+					"eslint:recommended",
+					"plugin:prettier/recommended"
+				]
+			},
+			{
+				"files": [
+					"./**/*.ts"
+				],
+				"parser": "@typescript-eslint/parser",
+				"extends": [
+					"plugin:@typescript-eslint/recommended",
+					"plugin:prettier/recommended"
+				],
+				"rules": {
+					"@typescript-eslint/member-delimiter-style": 0,
+					"@typescript-eslint/camelcase": 0,
+					"@typescript-eslint/explicit-function-return-type": 0,
+					"@typescript-eslint/explicit-module-boundary-types": 0
+				}
+			},
+			{
+				"files": [
+					"*.md"
+				],
+				"extends": [
+					"plugin:md/recommended"
+				],
+				"parser": "markdown-eslint-parser",
+				"rules": {
+					"md/remark": 0
+				}
+			}
+		]
+	},
+	"eslintIgnore": [
+		"dist/*",
+		".config/*",
+		"node_modules"
+	]
 }
