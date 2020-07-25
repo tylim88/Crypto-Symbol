@@ -1,6 +1,6 @@
 {
 	"name": "crypto-symbol",
-	"version": "0.2.4",
+	"version": "0.3.0",
 	"description": "Provide easy conversion between crypto symbol and name",
 	"main": "dist/index.js",
 	"scripts": {
@@ -25,7 +25,8 @@
 		"Bitcoin",
 		"Ethereum",
 		"cryptoCurrency",
-		"currency"
+		"currency",
+		"converter"
 	],
 	"dependencies": {},
 	"babel": {
@@ -37,7 +38,6 @@
 		"@babel/cli": "^7.4.3",
 		"@babel/core": "^7.4.3",
 		"@babel/node": "^7.2.2",
-		"@babel/preset-env": "^7.4.3",
-		"coinmarketcap-api": "^3.0.0"
+		"@babel/preset-env": "^7.4.3"
 	}
 }
