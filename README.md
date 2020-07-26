@@ -16,7 +16,7 @@
 
 ## Note
 
-version 1.0.0 released, I remade the whole library but keep **most** API function intact and added new API: retrieve name-symbol object and add new pair.
+version 1.0.0 released, I remade the whole library but keep **most** API function intact and added new API: retrieve name-symbol object and ability to add custom name-symbol pair.
 
 all API work exactly like before(and include) v0.3 unless stated otherwise.
 
