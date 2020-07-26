@@ -4,10 +4,11 @@
 	"description": "Provide easy conversion between crypto symbol and name",
 	"main": "dist/index.js",
 	"scripts": {
+		"install:clean": "rm -rf node_modules/ && rm -rf package-lock.json && npm i",
 		"tsc": "tsc --p tsconfig.json",
 		"lint": "eslint ./**/*.{ts,md} ",
 		"lint-fix": "eslint ./**/*.{ts,md} --fix",
-		"build": "babel src --out-dir dist --copy-files",
+		"build": "rm -rf dist && rm -rf build && babel src --out-dir dist --extensions \".ts\"",
 		"test": "jest"
 	},
 	"repository": {

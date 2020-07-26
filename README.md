@@ -1,12 +1,14 @@
 # Crypto-Symbol
 
+[![npm](https://img.shields.io/npm/v/crypto-symbol)](https://www.npmjs.com/package/crypto-symbol) [![GitHub](https://img.shields.io/github/license/tylim88/crypto-symbol)](https://github.com/tylim88/crypto-symbol/blob/master/LICENSE) [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](https://github.com/tylim88/crypto-symbol/pulls) [![tylim88](https://circleci.com/gh/tylim88/crypto-symbol.svg?style=svg)](<[LINK](https://github.com/tylim88/crypto-symbol#crypto-symbol)>)
+
 🐤 Provide easy conversion between crypto symbol and name
 
 📔 Source: [CoinMarketCap](https://coinmarketcap.com/all/views/all/)
 
 ✍️ Written in ES6️⃣ and compiled to ES5️⃣
 
-🆙 last update: 27-July-20
+🆙 last coin list update: 27-July-20
 
 ## Announcement
 
