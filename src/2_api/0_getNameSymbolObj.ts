@@ -1,5 +1,5 @@
-import { nameSymbolObj } from '0_constants'
-import { symbolOfLookupObjExact } from '1_data'
+import { nameSymbolObj } from '~/0_constants'
+import { symbolOfLookupObjExact } from '~/1_data'
 
 /**
  * @param {void}

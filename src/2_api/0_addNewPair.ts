@@ -3,8 +3,8 @@ import {
 	nameOfLookupObjExact,
 	symbolOfLookupObj,
 	symbolOfLookupObjExact,
-} from '1_data'
-import { onlyAlphaNumeric, trimAndLowerCase } from '0_utils'
+} from '~/1_data'
+import { onlyAlphaNumeric, trimAndLowerCase } from '~/0_utils'
 
 /** add user custom name-symbol pair
  * @param {string} nameString name of the crypto

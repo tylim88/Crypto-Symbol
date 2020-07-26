@@ -1,8 +1,9 @@
 {
 	"name": "crypto-symbol",
-	"version": "1.0.0",
+	"version": "1.0.3",
 	"description": "Provide easy conversion between crypto symbol and name",
 	"main": "dist/index.js",
+	"types": "build/index.d.ts",
 	"scripts": {
 		"install:clean": "rm -rf node_modules/ && rm -rf package-lock.json && npm i",
 		"tsc": "tsc -p tsconfig.json --noEmit && npm run dummy",
@@ -44,7 +45,7 @@
 				"babel-plugin-root-import",
 				{
 					"rootPathSuffix": "./src",
-					"rootPathPrefix": ""
+					"rootPathPrefix": "~/"
 				}
 			]
 		]
@@ -108,9 +109,6 @@
 					]
 				}
 			}
-		},
-		"parserOptions": {
-			"sourceType": "module"
 		},
 		"plugins": [
 			"prettier",
