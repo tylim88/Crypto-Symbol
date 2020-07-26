@@ -3,15 +3,15 @@ import { onlyAlphaNumeric } from '0_utils'
 
 /** this function search symbol based on the input name
  * @param {string} nameString insensitive of case, whitespace and all special character
- * @param {{exactMatch:boolean} | undefined } exactMatch set this to true if you want exact match
+ * @param {{exact:boolean} | undefined } exact set this to true if you want exact match
  * @return {string | undefined}
  */
 
 export const symbolOf = (
 	nameString: string,
-	config: { exactMatch?: boolean } = {}
+	config: { exact?: boolean } = {}
 ): string | undefined => {
-	return config.exactMatch
+	return config.exact
 		? symbolOfLookupObjExact[nameString]
 		: symbolOfLookupObj[onlyAlphaNumeric(nameString)]
 }

@@ -3,15 +3,15 @@ import { trimAndLowerCase } from '0_utils'
 
 /** this function search name based on the input symbol
  * @param {string} symbolString insensitive of case , leading and trailing space
- * @param {{exactMatch:boolean} | undefined } exactMatch set this to true if you want exact match
+ * @param {{exact:boolean} | undefined } exact set this to true if you want exact match
  * @return {string | undefined}
  */
 
 export const nameOf = (
 	symbolString: string,
-	config: { exactMatch?: boolean } = {}
+	config: { exact?: boolean } = {}
 ): string | undefined => {
-	return config.exactMatch
+	return config.exact
 		? nameOfLookupObjExact[symbolString]
 		: nameOfLookupObj[trimAndLowerCase(symbolString)]
 }

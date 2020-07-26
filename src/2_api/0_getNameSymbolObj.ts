@@ -6,7 +6,7 @@ import { symbolOfLookupObjExact } from '1_data'
  * @return { [prop:string]:string } the clone of original {name:symbol} WITHOUT custom name symbol pair added by user
  * it is a clone, so it wont affect the original object if you mutate it
  */
-export const getOriginalNameSymbolObj = () => ({ ...nameSymbolObj })
+export const getIntactNameSymbolObj = () => ({ ...nameSymbolObj })
 
 /**
  * @param {void}
