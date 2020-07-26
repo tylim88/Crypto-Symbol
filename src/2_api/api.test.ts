@@ -1,13 +1,13 @@
 import 'jest'
 import { addNewPair } from './0_addNewPair'
 import { getIntactNameSymbolObj, getNameSymbolObj } from './0_getNameSymbolObj'
-import { nameSymbolObj } from '0_constants'
+import { nameSymbolObj } from '~/0_constants'
 import {
 	nameOfLookupObj,
 	nameOfLookupObjExact,
 	symbolOfLookupObj,
 	symbolOfLookupObjExact,
-} from '1_data'
+} from '~/1_data'
 import { nameOf } from './0_nameOf'
 import { symbolOf } from './0_symbolOf'
 

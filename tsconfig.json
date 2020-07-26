@@ -14,7 +14,7 @@
 		"baseUrl": "src",
 		"noEmit": false,
 		"paths": {
-			"*": ["*"]
+			"~/*": ["*"]
 		},
 		"typeRoots": ["./node_modules/@types"]
 	},

@@ -4,7 +4,7 @@
 
 Change log
 
-## 1.0.0 26 July 2020
+## 1.0.8 26 July 2020
 
 - remade the whole library
 - revamp read me

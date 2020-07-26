@@ -3,7 +3,8 @@ CHANGELOG.md
 /.github
 /node_modules
 /src
-/build
+/build/**/*
+!/build/**/*.ts
 package-lock.json
 .gitignore
 .npmignore

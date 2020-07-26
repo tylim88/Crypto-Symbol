@@ -1,5 +1,5 @@
-import { nameOfLookupObj, nameOfLookupObjExact } from '1_data'
-import { trimAndLowerCase } from '0_utils'
+import { nameOfLookupObj, nameOfLookupObjExact } from '~/1_data'
+import { trimAndLowerCase } from '~/0_utils'
 
 /** this function search name based on the input symbol
  * @param {string} symbolString insensitive of case , leading and trailing space

@@ -1,5 +1,5 @@
-import { symbolOfLookupObj, symbolOfLookupObjExact } from '1_data'
-import { onlyAlphaNumeric } from '0_utils'
+import { symbolOfLookupObj, symbolOfLookupObjExact } from '~/1_data'
+import { onlyAlphaNumeric } from '~/0_utils'
 
 /** this function search symbol based on the input name
  * @param {string} nameString insensitive of case, whitespace and all special character
