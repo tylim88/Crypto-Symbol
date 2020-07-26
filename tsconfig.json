@@ -12,7 +12,7 @@
 		"target": "esNext",
 		"allowJs": true,
 		"baseUrl": "src",
-		"noEmit": true,
+		"noEmit": false,
 		"paths": {
 			"*": ["*"]
 		},

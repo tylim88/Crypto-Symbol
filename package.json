@@ -5,12 +5,12 @@
 	"main": "dist/index.js",
 	"scripts": {
 		"install:clean": "rm -rf node_modules/ && rm -rf package-lock.json && npm i",
-		"tsc": "tsc -p tsconfig.json",
+		"tsc": "tsc -p tsconfig.json --noEmit && npm run dummy",
 		"lint": "eslint ./**/*.{ts,md} ",
 		"lint-fix": "eslint ./**/*.{ts,md} --fix",
-		"build": "rm -rf dist && rm -rf build && babel src --out-dir dist --extensions \".ts\"",
-		"tbuild": "tsc src/index.ts -p ./tsconfig.json ",
-		"test": "jest"
+		"build": "rm -rf dist && rm -rf build && babel src --out-dir dist --extensions \".ts\" && tsc -p tsconfig.json",
+		"test": "jest",
+		"dummy": ""
 	},
 	"repository": {
 		"type": "git",
@@ -80,10 +80,10 @@
 	},
 	"lint-staged": {
 		"*.{ts,md}": [
-			"npm run tsc",
 			"npm run lint --fix",
 			"prettier --write"
-		]
+		],
+		"*.ts": "npm run tsc"
 	},
 	"prettier": {
 		"arrowParens": "avoid",

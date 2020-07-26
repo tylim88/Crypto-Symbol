@@ -6,13 +6,17 @@
 
 📔 Source: [CoinMarketCap](https://coinmarketcap.com/all/views/all/)
 
-✍️ Written in ES6️⃣ and compiled to ES5️⃣
+🔔 Almost 3000 pair to search.
 
 🆙 last coin list update: 24-July-20
 
-## Announcement
+✍️ Written in ES6️⃣ and compiled to ES5️⃣
 
-version 1.0.0 released, I remade the whole library but
+## Note
+
+version 1.0.0 released, I remade the whole library but keep **most** API function intact and added new API: retrieve name-symbol object and add new pair.
+
+all API work exactly like before(and include) v0.3 unless stated otherwise.
 
 ## Installation
 
@@ -22,34 +26,106 @@ npm i crypto-symbol
 
 ## Usage
 
-🎐 Normal Usage
+🎐 Symbol Lookup
 
 ```js
-const { symbol, name } = require('crypto-symbol')
+import { symbolOf, symbol, symbolM } from 'crypto-symbol'
 
-// case insensitive search
-console.log(symbol('liTecoin')) // "LTC"
-console.log(name('lTc')) // "Litecoin"
+// case insensitive
+// special character insensitive(only alphabet and number)
+// space insensitive
+// all this characteristic is same as API before v0.3
+console.log(symbolOf('  liT ec @oin  ')) // "LTC"
+
+// symbol and symbolM are alias of symbolOf
+// they all do the same thing
+// they exist to support old API
+// symbol and symbolM will be depreciated in future
+console.log(symbol('  liT ec @oin  ')) // "LTC"
+console.log(symbolM('  liT ec @oin  ')) // "LTC"
+
+// exact match (including case sensitive)
+console.log(symbolOf('  liT ec @oin  '), { exact: true }) // undefined
+console.log(symbolOf('litecoin'), { exact: true }) // "undefined"
+console.log(symbolOf('Litecoin'), { exact: true }) // "LTC"
+//
 ```
 
-⚡️ Memoization (highly recommended)
+⚡️ Name Lookup
+
+Note: the old name lookup in version 0.3-- does not ignore trailing and leading space
 
 ```js
-const { symbolM, nameM } = require('crypto-symbol')
+import { nameOf, nameM, name } from 'crypto-symbol'
 
-// consume more memory(insignificant) but much faster lookup
-// 800% to 1000% faster than array lookup on my machine
-console.log(symbolM('liTecoin')) // "LTC"
-console.log(nameM('lTc')) // "Litecoin"
+// trailing space insensitive
+// leading space insensitive
+// case insensitive
+console.log(nameOf('  Ltc   ')) // "Litecoin"
+
+// name and nameM are alias of nameOf
+// they all do the same thing
+// they exist to support old API
+// name and nameM will be depreciated in future
+console.log(name('  Ltc   ')) // "Litecoin"
+console.log(nameM('  Ltc   ')) // "Litecoin"
+
+// exact match (including case sensitive)
+console.log(nameOf('  Ltc   '), { exact: true }) // undefined
+console.log(nameOf('Ltc'), { exact: true }) // undefined
+console.log(nameOf('LTC'), { exact: true }) // Litecoin
 ```
 
-📚 Get Symbol and Name array
+🎵 Get Symbols
+
+Note: the old `symbols` will yield array, now it is a function.
 
 ```js
-const { symbols, names } = require('crypto-symbol')
+import { symbols, getSymbols } from 'crypto-symbol'
 
-console.log(symbols) // ['BTC','LTC'...]
-console.log(names) // ['Bitcoin', 'Litecoin'....]
+// return array of symbols, including custom symbols
+// the array is safe to mutate
+// symbols are alias of getSymbols
+// symbols will be depreciated in future
+console.log(getSymbols()) // ['BTC','LTC'...]
+console.log(symbols()) // ['BTC','LTC'...]
+```
+
+📚 Get Symbols
+
+Note: the old `names` will yield array, now it is a function.
+
+```js
+import { names, getNames } from 'crypto-symbol'
+
+// return array of names, including custom names
+// the array is safe to mutate
+// names are alias of getNames
+// names will be depreciated in future
+console.log(getNames()) // ['Bitcoin', 'Litecoin'....]
+console.log(names()) // ['Bitcoin', 'Litecoin'....]
+```
+
+⚖️ Get lookup object
+
+```js
+import { getNameSymbolObj, getIntactNameSymbolObj } from 'crypto-symbol'
+
+// return the name-symbol object, including the custom pair
+console.log(getNameSymbolObj()) // {Bitcoin:"BTC", Litecoin:"LTC",...}
+
+// return the name-symbol object, excluding the custom pair
+console.log(getIntactNameSymbolObj()) // {Bitcoin:"BTC", Litecoin:"LTC",...}
+```
+
+⚒ Add custom pair
+
+```js
+import { addNewPair } from 'crypto-symbol'
+
+// you can use this to add custom pair for lookup
+// you can also overwrite existing pair
+console.log(addNewPair('newCoin', 'NC123'))
 ```
 
 ## Tips & Star
