@@ -4,11 +4,16 @@
 
 Change log
 
-## 0.3.1 27 July 2020
+## 1.0.0 26 July 2020
+
+- remade the whole library
+- revamp read me
+
+## 0.3.1 24 July 2020
 
 - remove certain update in readMe to avoid confusion
 
-## 0.3.0 27 July 2020
+## 0.3.0 24 July 2020
 
 - update the name and symbol to the latest
 

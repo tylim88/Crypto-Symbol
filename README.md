@@ -8,13 +8,11 @@
 
 ✍️ Written in ES6️⃣ and compiled to ES5️⃣
 
-🆙 last coin list update: 27-July-20
+🆙 last coin list update: 24-July-20
 
 ## Announcement
 
-version 0.3 update the name and symbol to the latest of coinmarketcap
-
-due to increase download of this package (which is unexpected), I decided to continue the work on this library, expect better library in near future.
+version 1.0.0 released, I remade the whole library but
 
 ## Installation
 
@@ -52,17 +50,6 @@ const { symbols, names } = require('crypto-symbol')
 
 console.log(symbols) // ['BTC','LTC'...]
 console.log(names) // ['Bitcoin', 'Litecoin'....]
-```
-
-## Depreciated
-
-⚠️ Api that still available but no longer recommended
-
-```js
-const { crypto, cryptoM } = require('crypto-symbol')
-
-console.log(crypto('liTecoin'), crypto('lTc')) //"LTC Litecoin"
-console.log(cryptoM('liTecoin'), cryptoM('lTc')) //"LTC Litecoin"
 ```
 
 ## Tips & Star

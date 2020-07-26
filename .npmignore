@@ -1,9 +1,11 @@
-exp.js
-test.js
-HISTORY.MD
+CHANGELOG.md
+/.circleci 
 /.github
 /node_modules
 /src
+/build
 package-lock.json
 .gitignore
 .npmignore
+jest.config.js
+tsconfig.json    
