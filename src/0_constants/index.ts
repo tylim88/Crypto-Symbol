@@ -2,7 +2,7 @@
  * data obtain from coinmarketcap api
  * end point is latest listing
  */
-export const nameSymbolObj = {
+export const nameSymbolObj: { [name: string]: string } = {
 	'999': '999',
 	Bitcoin: 'BTC',
 	Ethereum: 'ETH',

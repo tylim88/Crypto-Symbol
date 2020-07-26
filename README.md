@@ -12,6 +12,8 @@
 
 ✍️ Written in ES6️⃣ and compiled to ES5️⃣
 
+⛲️ Out of box typescript support
+
 ## Note
 
 version 1.0.0 released, I remade the whole library but keep **most** API function intact and added new API: retrieve name-symbol object and add new pair.
