@@ -4,7 +4,7 @@
 
 🐤 Provide easy conversion between crypto symbol and name
 
-📔 Source: [CoinMarketCap](https://coinmarketcap.com/all/views/all/)
+📔 Source: [CoinMarketCap](https://coinmarketcap.com)
 
 🔔 Almost 3000 pair to search.
 
