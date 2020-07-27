@@ -2,17 +2,21 @@
 
 [![npm](https://img.shields.io/npm/v/crypto-symbol)](https://www.npmjs.com/package/crypto-symbol) [![GitHub](https://img.shields.io/github/license/tylim88/crypto-symbol)](https://github.com/tylim88/crypto-symbol/blob/master/LICENSE) [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](https://github.com/tylim88/crypto-symbol/pulls)[![tylim88](https://circleci.com/gh/tylim88/Crypto-Symbol.svg?style=shield)](<[LINK](https://github.com/tylim88/crypto-symbol#crypto-symbol)>)
 
-🐤 Provide easy conversion between crypto symbol and name
+🐤 Provide easy conversion between crypto symbol and name.
 
 📔 Source: [CoinMarketCap](https://coinmarketcap.com)
 
-🔔 Almost 3000 pair to search.
+🔔 Almost 3000 pair to search for.
 
-🆙 last coin list update: 24-July-20
+💪 Can add your own custom name-symbol pair.
+
+🌟 Optimized lookup time.
+
+🆙 last coin list update: 24-July-20.
 
 ✍️ Written in ES6️⃣ and compiled to ES5️⃣
 
-⛲️ Out of box typescript support
+⛲️ Out of box typescript support.
 
 ## Note
 
@@ -54,7 +58,7 @@ console.log(symbolOf('Litecoin', { exact: true })) // "LTC"
 
 ⚡️ Name Lookup
 
-Note: the old name lookup in version 0.3-- does not ignore trailing and leading space
+Note: the old name lookup in version before 0.3 does not ignore trailing and leading space
 
 ```js
 import { nameOf, nameM, name } from 'crypto-symbol'
@@ -112,10 +116,10 @@ console.log(names()) // ['Bitcoin', 'Litecoin'....]
 ```js
 import { getNameSymbolObj, getIntactNameSymbolObj } from 'crypto-symbol'
 
-// return the name-symbol object, including the custom pair
+// return the name-symbol object, INCLUDING custom pairs that you add
 console.log(getNameSymbolObj()) // {Bitcoin:"BTC", Litecoin:"LTC",...}
 
-// return the name-symbol object, excluding the custom pair
+// return the name-symbol object, EXCLUDING custom pairs that you add
 console.log(getIntactNameSymbolObj()) // {Bitcoin:"BTC", Litecoin:"LTC",...}
 ```
 
@@ -124,8 +128,8 @@ console.log(getIntactNameSymbolObj()) // {Bitcoin:"BTC", Litecoin:"LTC",...}
 ```js
 import { addNewPair } from 'crypto-symbol'
 
-// you can use this to add custom pair for lookup
-// you can also overwrite existing pair
+// add custom pair for lookup
+// or overwrite existing pair
 console.log(addNewPair('newCoin', 'NC123'))
 ```
 
