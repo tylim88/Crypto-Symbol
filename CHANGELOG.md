@@ -4,6 +4,10 @@
 
 Change log
 
+## 1.0.17 29 July 2020
+
+- fix type not working issue
+
 ## 1.0.8 26 July 2020
 
 - remade the whole library

@@ -16,6 +16,8 @@
 
 ✍️ Written in ES6️⃣ and compiled to ES5️⃣
 
+🥰 0 dependency.
+
 ⛲️ Out of box typescript support.
 
 🦺 Tested.
