@@ -1,6 +1,6 @@
 {
 	"name": "crypto-symbol",
-	"version": "1.0.15",
+	"version": "1.0.16",
 	"description": "Provide easy conversion between crypto symbol and name",
 	"main": "dist/index.js",
 	"types": "build/index.d.ts",
@@ -9,7 +9,7 @@
 		"tsc": "tsc -p tsconfig.json --noEmit && npm run dummy",
 		"lint": "eslint ./**/*.ts ",
 		"lint-fix": "eslint ./**/*.ts --fix",
-		"build": "rm -rf dist && rm -rf build && babel src --out-dir dist --extensions \".ts\" && tsc -p tsconfig.json",
+		"build": "rm -rf dist && rm -rf types && babel src --out-dir dist --extensions \".ts\" && tsc -p tsconfig.json",
 		"test": "jest",
 		"dummy": ""
 	},
