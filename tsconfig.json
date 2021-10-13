@@ -12,9 +12,9 @@
 		"target": "esNext",
 		"allowJs": true,
 		"baseUrl": "src",
-		"noEmit": false,
+		"noEmit": true,
 		"paths": {
-			"~/*": ["*"]
+			"*": ["*"]
 		},
 		"typeRoots": ["./node_modules/@types"]
 	},

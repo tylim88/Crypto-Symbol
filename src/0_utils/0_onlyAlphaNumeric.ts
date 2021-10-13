@@ -4,5 +4,11 @@
  * @param {string} nameString - string that you want to work on
  * @return {string}
  */
-export const onlyAlphaNumeric = (nameString: string) =>
-	nameString.replace(/[^a-zA-Z0-9]/g, '').toLowerCase()
+export const onlyAlphaNumeric = (
+	nameString: string,
+	specialCharacterToAllow = ''
+) => {
+	const re = new RegExp(`[^${specialCharacterToAllow}a-zA-Z0-9]`, 'g')
+
+	return nameString.replace(re, '').toLowerCase()
+}

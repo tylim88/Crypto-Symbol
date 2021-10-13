@@ -1,8 +1,11 @@
-<!-- if this file name is history, eslint parsing error, wtf? -->
-
 # HISTORY
 
 Change log
+
+## 2.0.0 13 Oct 2021
+
+- revamp whole api (breaking change), simpler and easier to use
+- update coin to 13 Oct 2021, source coinmarketcap.com
 
 ## 1.0.17 29 July 2020
 
