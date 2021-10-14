@@ -2,6 +2,10 @@
 
 Change log
 
+## 3.2.0 15-Oct-2021
+
+- add declaration file (left out by previous version)
+
 ## 3.1.0 14 Oct 2021
 
 - restore accidentally deleted file
