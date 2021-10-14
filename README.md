@@ -36,7 +36,7 @@ npm i crypto-symbol
 
 🎵 Get Pairs Object
 
-```js
+```ts
 import { cryptoSymbol } from 'crypto-symbol'
 
 const { get } = cryptoSymbol({})
@@ -48,16 +48,18 @@ console.log(get().SNPair) // {BTC: 'Bitcoin',ETH: 'Ethereum','BNB': 'Binance Coi
 
 ⚒ Add new pair
 
-```js
+```ts
 import { cryptoSymbol } from 'crypto-symbol'
 
 // will overwrite existing pair and add new type to pairs object
-const { get, nameLookup, symbolLookup } = cryptoSymbol({ newCoin: 'NC123' as const }) // use const assertion to narrow down the type
+const { get, nameLookup, symbolLookup } = cryptoSymbol({
+	newCoin: 'NC123' as const,
+}) // use const assertion to narrow down the type
 ```
 
 🎐 Symbol Lookup
 
-```js
+```ts
 import { cryptoSymbol } from 'crypto-symbol'
 
 const { symbolLookup } = cryptoSymbol({})
@@ -80,7 +82,7 @@ console.log(symbolLookup('Litecoin', { exact: true })) // "LTC"
 
 ⚡️ Name Lookup
 
-```js
+```ts
 import { cryptoSymbol } from 'crypto-symbol'
 
 const { nameLookup } = cryptoSymbol({})
