@@ -23,7 +23,4 @@ module.exports = {
 		'@typescript-eslint/no-explicit-any': 'error',
 		camelcase: 'off',
 	},
-	parserOptions: {
-		project: './tsconfig.json',
-	},
 }

@@ -10,8 +10,4 @@ module.exports = {
 			diagnostics: false,
 		},
 	},
-	moduleNameMapper: {
-		'@eslint/eslintrc/universal':
-			'@eslint/eslintrc/dist/eslintrc-universal.cjs',
-	},
 }
