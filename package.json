@@ -1,6 +1,6 @@
 {
 	"name": "crypto-symbol",
-	"version": "3.0.0",
+	"version": "3.0.1",
 	"description": "Provide easy conversion between crypto symbol and name",
 	"main": "dist/index.js",
 	"types": "types/index.d.ts",
@@ -69,7 +69,7 @@
 		}
 	},
 	"lint-staged": {
-		"*.{md,ts}": [
+		"*.{ts}": [
 			"npm run lint --fix",
 			"prettier --write"
 		]

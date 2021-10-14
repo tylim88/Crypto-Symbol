@@ -69,8 +69,8 @@ console.log(symbolLookup('  liT ec @oin  ')) // "LTC"
 
 // can allow specific special character (co-exist with case insensitive and allow alphanumeric rules)
 // to allow multiple special character, simply concat all the character, eg "#$%)("
-symbolLookup(' τbITcO in ') // BTC
-symbolLookup(' τbITcO in ', { allow: 'τ' }) // TBTC
+console.log(symbolLookup(' τbITcO in ')) // BTC
+console.log(symbolLookup(' τbITcO in ', { allow: 'τ' })) // TBTC
 
 // exact match (including case sensitive)
 console.log(symbolLookup('  liT ec @oin  ', { exact: true })) // undefined
