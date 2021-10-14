@@ -1,16 +1,27 @@
 import 'jest'
 import { cryptoSymbol } from './index'
 import { symbolLookupObject } from '0_constants'
+import { swapKeyAndValue } from '0_utils'
+
 describe('2_api', () => {
 	describe('test with < {newCoin: NCKLNP} > ', () => {
-		const pairs = cryptoSymbol({ newCoin: 'NCKLNP' as const })
+		const pairs = cryptoSymbol({
+			newCoin: 'NCKLNP' as const,
+			XRP: 'XRPP' as const,
+		})
 		it('check new pair', () => {
-			expect.assertions(1)
-
-			expect(pairs.get()).toEqual({
+			expect(pairs.get().NSPair).toEqual({
 				...symbolLookupObject,
 				newCoin: 'NCKLNP',
+				XRP: 'XRPP',
 			})
+			expect(pairs.get().SNPair).toEqual(
+				swapKeyAndValue({
+					...symbolLookupObject,
+					newCoin: 'NCKLNP',
+					XRP: 'XRPP',
+				})
+			)
 		})
 		it('name lookup', () => {
 			const nameLookup = pairs.nameLookup
@@ -39,9 +50,7 @@ describe('2_api', () => {
 			expect(symbolLookup('newCoin', { exact: true })).toEqual('NCKLNP')
 			expect(symbolLookup('new2Coin', { exact: true })).toEqual(undefined)
 			expect(symbolLookup(' bITcO in ')).toEqual('BTC')
-			expect(
-				symbolLookup(' τbITcO in ', { specialCharacterToAllow: 'τ' })
-			).toEqual('ΤBTC')
+			expect(symbolLookup(' τbITcO in ', { allow: 'τ' })).toEqual('ΤBTC')
 			expect(symbolLookup('  liT ec @oin  ')).toEqual('LTC')
 			expect(symbolLookup('  liT ec @oin  ', { exact: true })).toEqual(
 				undefined

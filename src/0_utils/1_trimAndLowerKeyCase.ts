@@ -9,8 +9,14 @@ import { trimAndLowerCase } from './0_trimAndLowerCase'
  * @return {[prop:string]: string}
  */
 
-export const trimAndLowerKeyCase = (obj: { [prop: string]: string }) => {
-	const newObj: { [prop: string]: string } = {}
+export const trimAndLowerKeyCase = <
+	T extends { [index: string]: string | number | symbol }
+>(
+	obj: T
+) => {
+	const newObj: {
+		[index: string]: string | number | symbol
+	} = {}
 	for (const prop in obj) {
 		newObj[trimAndLowerCase(prop)] = obj[prop]
 	}

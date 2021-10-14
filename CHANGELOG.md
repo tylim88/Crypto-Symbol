@@ -2,6 +2,11 @@
 
 Change log
 
+## 3.0.0 13 Oct 2021
+
+- get now return 2 value, name symbol pair and symbol name pair
+- improve api, not compatible with 2.0
+
 ## 2.0.0 13 Oct 2021
 
 - revamp whole api (breaking change), simpler and easier to use

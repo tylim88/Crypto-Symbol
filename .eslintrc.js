@@ -14,7 +14,8 @@ module.exports = {
 	],
 	parser: '@typescript-eslint/parser',
 	ignorePatterns: [
-		'/dist/**/*', // Ignore built files.
+		'dist/**/*', // Ignore built files.
+		'src/0_utils/0_swapKeyAndValue.ts', // for some reason eslint parsing error
 	],
 	plugins: ['@typescript-eslint', 'import'],
 	rules: {
