@@ -1,10 +1,25 @@
 import { symbolLookupObject } from '0_constants'
 import { swapKeyAndValue, trimAndLowerKeyCase, onlyAlphaNumeric } from '0_utils'
 
+//* this should be the correct type, however this type too long due to union, not much info can be found other than https://stackoverflow.com/questions/68463963/typescript-the-inferred-type-of-this-node-exceeds-the-maximum-length-the-compi
+// type ori = typeof symbolLookupObject
+// export const cryptoSymbol = <T extends { [index: string]: string }>(
+// 	newPair?: T
+// ) => {
+// 	const NSPair = {
+// 		...symbolLookupObject,
+// 		...newPair,
+// 	} as typeof newPair extends undefined ? ori : T extends ori
+// 		? Omit<ori, keyof T> & T
+// 		: ori extends T
+// 		? Omit<ori, keyof T> & T
+// 		: ori & T
+
 /** this function add new pair and create lookup methods
  * @param {object} newPair add new pair of crypto symbol { name:symbol }, place {} if no new pair to add
  * @returns methods
  */
+
 export const cryptoSymbol = <T extends { [index: string]: string }>(
 	newPair: T
 ) => {
