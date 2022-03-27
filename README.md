@@ -65,16 +65,16 @@ import { cryptoSymbol } from 'crypto-symbol'
 const { symbolLookup } = cryptoSymbol({})
 
 // case insensitive
-// allow only alphanumeric
-// by default ignore all special character and space)
+// ignore all special character and space
 console.log(symbolLookup('  liT ec @oin  ')) // "LTC"
-
-// can allow specific special character (co-exist with case insensitive and allow alphanumeric rules)
-// to allow multiple special character, simply concat all the character, eg "#$%)("
 console.log(symbolLookup(' τbITcO in ')) // BTC
+
+// case insensitive
+// can allow specific special character
+// to allow multiple special character, simply concat all the character, eg "#$%)("
 console.log(symbolLookup(' τbITcO in ', { allow: 'τ' })) // TBTC
 
-// exact match (including case sensitive)
+// exact match (case sensitive)
 console.log(symbolLookup('  liT ec @oin  ', { exact: true })) // undefined
 console.log(symbolLookup('litecoin', { exact: true })) // "undefined"
 console.log(symbolLookup('Litecoin', { exact: true })) // "LTC"
@@ -88,16 +88,15 @@ import { cryptoSymbol } from 'crypto-symbol'
 const { nameLookup } = cryptoSymbol({})
 
 // case insensitive
-// allow only alphanumeric
 // ignore all special character and space)
 console.log(nameLookup('  @Ltc!   ')) // "Litecoin"
 
-// can allow specific special character (co-exist with case insensitive and allow alphanumeric rules)
+// can allow specific special character
 // to allow multiple special character, simply concat all the character, eg "#$%)("
-// however this seem pointless as all symbol are alphanumeric
+// all symbol are alphanumeric anyway, I don't think you will need it
 console.log(nameLookup('  @Ltc!   '), { allow: '@' }) // undefined, because symbol "@Ltc" does not exist
 
-// exact match (including case sensitive)
+// exact match (case sensitive)
 console.log(nameLookup('  Ltc   ', { exact: true })) // undefined
 console.log(nameLookup('Ltc', { exact: true })) // undefined
 console.log(nameLookup('LTC', { exact: true })) // Litecoin
