@@ -75,7 +75,7 @@
 
 ⛲️ Out of box typescript support.
 
-🦺 Tested.
+🦺 Development code, built code and published code are tested in CI.
 
 ## Regarding 3.3.0
 
