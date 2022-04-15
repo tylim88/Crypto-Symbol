@@ -7,6 +7,8 @@ Change log
 - improve type definition
 - ci now test development code, built code and published code
 - add more package.json script
+- remove `Xeno Token`
+- change `Nano` symbol to `XNO`
 
 ## 3.2.0 15-Oct-2021
 
