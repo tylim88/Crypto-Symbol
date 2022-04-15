@@ -1,6 +1,61 @@
 # Crypto-Symbol
 
-[![npm](https://img.shields.io/npm/v/crypto-symbol)](https://www.npmjs.com/package/crypto-symbol) [![GitHub](https://img.shields.io/github/license/tylim88/crypto-symbol)](https://github.com/tylim88/crypto-symbol/blob/master/LICENSE) [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](https://github.com/tylim88/crypto-symbol/pulls) [![tylim88](https://circleci.com/gh/tylim88/Crypto-Symbol.svg?style=shield)](<[LINK](https://github.com/tylim88/crypto-symbol#crypto-symbol)>)
+<div align="center">
+		<h1>crypto-symbol</h1>
+</div>
+
+<div align="center">
+		<a href="https://www.npmjs.com/package/crypto-symbol" target="_blank">
+				<img
+					src="https://img.shields.io/npm/v/crypto-symbol"
+					alt="Created by tylim88"
+				/>
+			</a>
+			&nbsp;
+			<a
+				href="https://github.com/tylim88/crypto-symbol/blob/main/LICENSE"
+				target="_blank"
+			>
+				<img
+					src="https://img.shields.io/github/license/tylim88/crypto-symbol"
+					alt="License"
+				/>
+			</a>
+			&nbsp;
+			<a
+				href="https://www.npmjs.com/package/crypto-symbol?activeTab=dependencies"
+				target="_blank"
+			>
+				<img
+					src="https://img.shields.io/badge/dynamic/json?url=https://api.npmutil.com/package/crypto-symbol&label=dependencies&query=$.dependencies.count&color=brightgreen"
+					alt="dependency count"
+				/>
+			</a>
+			&nbsp;
+			<a href="https://github.com/tylim88/crypto-symbol/actions" target="_blank">
+				<img
+					src="https://github.com/tylim88/crypto-symbol/actions/workflows/main.yml/badge.svg"
+					alt="github action"
+				/>
+			</a>
+			&nbsp;
+			<a href="https://github.com/tylim88/crypto-symbol/issues" target="_blank">
+				<img
+					alt="GitHub issues"
+					src="https://img.shields.io/github/issues-raw/tylim88/crypto-symbol"
+				></img>
+			</a>
+			&nbsp;
+			<a href="https://snyk.io/test/github/tylim88/crypto-symbol" target="_blank">
+				<img
+					src="https://snyk.io/test/github/tylim88/crypto-symbol/badge.svg"
+					alt="code coverage"
+				/>
+			</a>
+			&nbsp;
+
+</div>
+<br/>
 
 🐤 Simple fuzzy conversion for crypto symbol and crypto name.
 
@@ -20,11 +75,17 @@
 
 ⛲️ Out of box typescript support.
 
-🦺 Tested.
+🦺 Development code, built code and published code are tested in CI.
 
-## Breaking change
+## Regarding 3.3.0
 
-version 3.0.0 is not compatible with version 2.0, 3.0 slightly improve the api
+The new `Nano` symbol ticker symbol is `XNO` which is conflict with the `Xeno Token` symbol.
+
+I believe this is the only edge case as ticker has to be unique, not sure why `Nano` violate it.
+
+Since there is only one edge case, I decide to sacrifice `Xeno Token` because it is not well known, `Xeno Token` no longer in the list.
+
+If you think a future-proof solution is needed, open an issue and justify it, then I will consider put more effort on it.
 
 ## Installation
 

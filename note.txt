@@ -1,0 +1,6 @@
+future works
+
+- now sync daily (but only publish if found new symbol)
+- add sync function (only work in server environment due to cors issue)
+- add mechanic to detect duplicated symbol
+- add mechanic to handle duplicated symbol

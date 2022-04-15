@@ -2,6 +2,14 @@
 
 Change log
 
+## 3.3.0 15-April-2022
+
+- improve type definition
+- ci now test development code, built code and published code
+- add more package.json script
+- remove `Xeno Token`
+- change `Nano` symbol to `XNO`
+
 ## 3.2.0 15-Oct-2021
 
 - add declaration file (left out by previous version)
