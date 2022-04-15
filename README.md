@@ -34,7 +34,7 @@
 			&nbsp;
 			<a href="https://github.com/tylim88/crypto-symbol/actions" target="_blank">
 				<img
-					src="https://github.com/tylim88/crypto-symbol/actions/workflows/Main.yml/badge.svg"
+					src="https://github.com/tylim88/Crypto-Symbol/workflows/Main/badge.svg"
 					alt="github action"
 				/>
 			</a>
