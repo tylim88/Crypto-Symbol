@@ -1,5 +1,9 @@
-import { symbolLookupObject } from '0_constants'
-import { swapKeyAndValue, trimAndLowerKeyCase, onlyAlphaNumeric } from '0_utils'
+import { symbolLookupObject } from './0_constants'
+import {
+	swapKeyAndValue,
+	trimAndLowerKeyCase,
+	onlyAlphaNumeric,
+} from './0_utils'
 
 //* this should be the correct type, however this type too long due to union, not much info can be found other than https://stackoverflow.com/questions/68463963/typescript-the-inferred-type-of-this-node-exceeds-the-maximum-length-the-compi
 // type ori = typeof symbolLookupObject
@@ -20,15 +24,13 @@ import { swapKeyAndValue, trimAndLowerKeyCase, onlyAlphaNumeric } from '0_utils'
  * @returns methods
  */
 
-export const cryptoSymbol = <T extends { [index: string]: string }>(
-	newPair: T
-) => {
+export const cryptoSymbol = <T extends Record<string, string>>(newPair: T) => {
 	const NSPair: Omit<typeof symbolLookupObject, keyof T> & T = {
 		...symbolLookupObject,
 		...newPair,
 	}
 	const SNPair = swapKeyAndValue(NSPair)
-	const SNPairTrimmed = trimAndLowerKeyCase(SNPair)
+	const SNPairTrimmed = trimAndLowerKeyCase(SNPair as Record<string, string>)
 	const NSPairTrimmed = trimAndLowerKeyCase(NSPair)
 	return {
 		/** this function return all pairs object
@@ -42,9 +44,9 @@ export const cryptoSymbol = <T extends { [index: string]: string }>(
 			SNPair,
 		}),
 		/** this function search name based on the input symbol
-		 * @param {string} symbolString symbol that you want to search name for
-		 * @param {{exact:boolean, allow:string} | undefined } exact set this to true if you want exact match, "allow" whitelist the character you dont want to ignore
-		 * @returns {string | undefined} name of the coin
+		 * @param symbolString symbol that you want to search name for
+		 * @param exact set this to true if you want exact match, "allow" whitelist the character you dont want to ignore
+		 * @returns name of the coin
 		 */
 		nameLookup: (
 			symbolString: string,
@@ -58,9 +60,9 @@ export const cryptoSymbol = <T extends { [index: string]: string }>(
 				: SNPairTrimmed[onlyAlphaNumeric(symbolString, config.allow)]
 		},
 		/** this function search symbol based on the input name
-		 * @param {string} nameString name that you want to search symbol for
-		 * @param {{exact:boolean, allow:string} | undefined } exact set this to true if you want exact match, "allow" whitelist the character you dont want to ignore
-		 * @returns {string | undefined} symbol of the coin
+		 * @param nameString name that you want to search symbol for
+		 * @param exact set this to true if you want exact match, "allow" whitelist the character you dont want to ignore
+		 * @returns symbol of the coin
 		 */
 		symbolLookup: (
 			nameString: string,
@@ -70,10 +72,8 @@ export const cryptoSymbol = <T extends { [index: string]: string }>(
 			}
 		): string | undefined => {
 			return config.exact
-				? (NSPair as { [index: string]: string })[nameString]
-				: (NSPairTrimmed as { [index: string]: string })[
-						onlyAlphaNumeric(nameString, config.allow)
-				  ]
+				? NSPair[nameString]
+				: NSPairTrimmed[onlyAlphaNumeric(nameString, config.allow)]
 		},
 	}
 }

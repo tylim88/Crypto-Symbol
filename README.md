@@ -1,6 +1,90 @@
 # Crypto-Symbol
 
-[![npm](https://img.shields.io/npm/v/crypto-symbol)](https://www.npmjs.com/package/crypto-symbol) [![GitHub](https://img.shields.io/github/license/tylim88/crypto-symbol)](https://github.com/tylim88/crypto-symbol/blob/master/LICENSE) [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](https://github.com/tylim88/crypto-symbol/pulls) [![tylim88](https://circleci.com/gh/tylim88/Crypto-Symbol.svg?style=shield)](<[LINK](https://github.com/tylim88/crypto-symbol#crypto-symbol)>)
+<div align="center">
+		<h1>crypto-symbol 烈火君JS</h1>
+</div>
+
+<div align="center">
+		<a href="https://www.npmjs.com/package/crypto-symbol" target="_blank">
+				<img
+					src="https://img.shields.io/npm/v/crypto-symbol"
+					alt="Created by tylim88"
+				/>
+			</a>
+			&nbsp;
+			<a
+				href="https://github.com/tylim88/crypto-symbol/blob/main/LICENSE"
+				target="_blank"
+			>
+				<img
+					src="https://img.shields.io/github/license/tylim88/crypto-symbol"
+					alt="License"
+				/>
+			</a>
+			&nbsp;
+			<a
+				href="https://www.npmjs.com/package/crypto-symbol?activeTab=dependencies"
+				target="_blank"
+			>
+				<img
+					src="https://img.shields.io/badge/dynamic/json?url=https://api.npmutil.com/package/crypto-symbol&label=dependencies&query=$.dependencies.count&color=brightgreen"
+					alt="dependency count"
+				/>
+			</a>
+			&nbsp;
+			<img
+				src="https://img.shields.io/badge/gzipped-2KB-brightgreen"
+				alt="package size"
+			/>
+			&nbsp;
+			<a href="https://github.com/tylim88/crypto-symbol/actions" target="_blank">
+				<img
+					src="https://github.com/tylim88/crypto-symbol/actions/workflows/main.yml/badge.svg"
+					alt="github action"
+				/>
+			</a>
+			&nbsp;
+			<a href="https://codecov.io/gh/tylim88/crypto-symbol" target="_blank">
+				<img
+					src="https://codecov.io/gh/tylim88/crypto-symbol/branch/main/graph/badge.svg"
+					alt="code coverage"
+				/>
+			</a>
+			&nbsp;
+			<a href="https://github.com/tylim88/crypto-symbol/issues" target="_blank">
+				<img
+					alt="GitHub issues"
+					src="https://img.shields.io/github/issues-raw/tylim88/crypto-symbol"
+				></img>
+			</a>
+			&nbsp;
+			<a href="https://snyk.io/test/github/tylim88/crypto-symbol" target="_blank">
+				<img
+					src="https://snyk.io/test/github/tylim88/crypto-symbol/badge.svg"
+					alt="code coverage"
+				/>
+			</a>
+			&nbsp;
+			<a
+				href="https://lgtm.com/projects/g/tylim88/crypto-symbol/alerts/"
+				target="_blank"
+			>
+				<img
+					alt="Total alerts"
+					src="https://img.shields.io/lgtm/alerts/g/tylim88/crypto-symbol.svg?logo=lgtm&logoWidth=18"
+				/>
+			</a>
+			&nbsp;
+			<a
+				href="https://lgtm.com/projects/g/tylim88/crypto-symbol/context:javascript"
+				target="_blank"
+			>
+				<img
+					alt="Language grade: JavaScript"
+					src="https://img.shields.io/lgtm/grade/javascript/g/tylim88/crypto-symbol.svg?logo=lgtm&logoWidth=18"
+				/>
+			</a>
+</div>
 
 🐤 Simple fuzzy conversion for crypto symbol and crypto name.
 

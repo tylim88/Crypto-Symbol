@@ -2,6 +2,16 @@
 
 Change log
 
+## 3.3.0 ?-April-2022
+
+- now sync daily (but only publish if found new symbol)
+- add sync function (only work in server environment due to cors issue)
+- add mechanic to detect duplicated symbol
+- add mechanic to handle duplicated symbol
+- improve typescript type code quality
+- ci now test development code, built code and published code
+- improve package.json script
+
 ## 3.2.0 15-Oct-2021
 
 - add declaration file (left out by previous version)

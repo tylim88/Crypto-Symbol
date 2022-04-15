@@ -1,25 +1,9 @@
-import { cryptoSymbol } from './index'
-import { symbolLookupObject } from './0_constants'
-import { swapKeyAndValue } from './0_utils'
+import { cryptoSymbol } from 'crypto-symbol'
 
 describe('test with < {newCoin: NCKLNP} > ', () => {
 	const pairs = cryptoSymbol({
 		newCoin: 'NCKLNP' as const,
 		XRP: 'XRPP' as const,
-	})
-	it('check new pair', () => {
-		expect(pairs.get().NSPair).toEqual({
-			...symbolLookupObject,
-			newCoin: 'NCKLNP',
-			XRP: 'XRPP',
-		})
-		expect(pairs.get().SNPair).toEqual(
-			swapKeyAndValue({
-				...symbolLookupObject,
-				newCoin: 'NCKLNP',
-				XRP: 'XRPP',
-			})
-		)
 	})
 	it('name lookup', () => {
 		const nameLookup = pairs.nameLookup

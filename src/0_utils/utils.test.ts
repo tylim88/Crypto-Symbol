@@ -1,4 +1,3 @@
-import 'jest'
 import { onlyAlphaNumeric } from './0_onlyAlphaNumeric'
 import { swapKeyAndValue } from './0_swapKeyAndValue'
 import { trimAndLowerCase } from './0_trimAndLowerCase'

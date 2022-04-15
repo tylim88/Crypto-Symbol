@@ -1,11 +1,11 @@
 /**
  * remove all non alphaNumeric characters from a string
  * also convert it to lower case
- * @param {string} nameString - string that you want to work on
- * @return {string}
+ * @param string - string that you want to work on
+ * @return nameString without special characters
  */
-export const onlyAlphaNumeric = (nameString: string, allow = '') => {
+export const onlyAlphaNumeric = (string: string, allow = '') => {
 	const re = new RegExp(`[^${allow}a-zA-Z0-9]`, 'g')
 
-	return nameString.replace(re, '').toLowerCase()
+	return string.replace(re, '').toLowerCase()
 }
