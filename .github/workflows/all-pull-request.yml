@@ -10,7 +10,6 @@ jobs:
           node-version: '16.14'
           cache: 'npm'
           cache-dependency-path: '**/package-lock.json'
-      - run: npm i -g firebase-tools
       - run: npm i
       - run: npm run lint --fix
       - run: npm run pretty-quick
