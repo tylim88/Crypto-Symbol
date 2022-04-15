@@ -12,7 +12,6 @@ jobs:
           cache: 'npm'
           cache-dependency-path: '**/package-lock.json'
           registry-url: 'https://registry.npmjs.org'
-      - run: npm i -g firebase-tools
       - run: npm i
       - run: npm run build
       - run: npm publish
