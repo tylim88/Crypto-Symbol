@@ -2,6 +2,7 @@
 	"name": "crypto-symbol",
 	"version": "3.3.0",
 	"description": "Provide easy conversion between crypto symbol and name",
+	"source": "src/index.ts",
 	"main": "dist/index.js",
 	"types": "dist/index.d.ts",
 	"targets": {
@@ -72,8 +73,5 @@
 		"ts-jest": "^27.1.4",
 		"ts-node": "^10.7.0",
 		"typescript": "^4.6.3"
-	},
-	"dependencies": {
-		"axios": "^0.26.1"
 	}
 }

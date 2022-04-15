@@ -1,7 +1,7 @@
 # Crypto-Symbol
 
 <div align="center">
-		<h1>crypto-symbol 烈火君JS</h1>
+		<h1>crypto-symbol</h1>
 </div>
 
 <div align="center">
@@ -32,22 +32,10 @@
 				/>
 			</a>
 			&nbsp;
-			<img
-				src="https://img.shields.io/badge/gzipped-2KB-brightgreen"
-				alt="package size"
-			/>
-			&nbsp;
 			<a href="https://github.com/tylim88/crypto-symbol/actions" target="_blank">
 				<img
 					src="https://github.com/tylim88/crypto-symbol/actions/workflows/main.yml/badge.svg"
 					alt="github action"
-				/>
-			</a>
-			&nbsp;
-			<a href="https://codecov.io/gh/tylim88/crypto-symbol" target="_blank">
-				<img
-					src="https://codecov.io/gh/tylim88/crypto-symbol/branch/main/graph/badge.svg"
-					alt="code coverage"
 				/>
 			</a>
 			&nbsp;
@@ -65,26 +53,9 @@
 				/>
 			</a>
 			&nbsp;
-			<a
-				href="https://lgtm.com/projects/g/tylim88/crypto-symbol/alerts/"
-				target="_blank"
-			>
-				<img
-					alt="Total alerts"
-					src="https://img.shields.io/lgtm/alerts/g/tylim88/crypto-symbol.svg?logo=lgtm&logoWidth=18"
-				/>
-			</a>
-			&nbsp;
-			<a
-				href="https://lgtm.com/projects/g/tylim88/crypto-symbol/context:javascript"
-				target="_blank"
-			>
-				<img
-					alt="Language grade: JavaScript"
-					src="https://img.shields.io/lgtm/grade/javascript/g/tylim88/crypto-symbol.svg?logo=lgtm&logoWidth=18"
-				/>
-			</a>
+
 </div>
+<br/>
 
 🐤 Simple fuzzy conversion for crypto symbol and crypto name.
 
@@ -106,9 +77,15 @@
 
 🦺 Tested.
 
-## Breaking change
+## Regarding 3.3.0
 
-version 3.0.0 is not compatible with version 2.0, 3.0 slightly improve the api
+The new `Nano` symbol ticker symbol is `XNO` which is conflict with the `Xeno Token` symbol.
+
+I believe this is the only edge case as ticker has to be unique, not sure why `Nano` violate it.
+
+Since there is only one edge case, I decide to sacrifice `Xeno Token` because it is not well known, `Xeno Token` no longer in the list.
+
+If you think a future-proof solution is needed, open an issue and justify it, then I will consider put more effort on it.
 
 ## Installation
 
