@@ -21,6 +21,7 @@ jobs:
       - run: npm run b-test
       - uses: codecov/codecov-action@v2
   build_publish:
+    needs: build_test
     runs-on: ubuntu-latest
     if: github.ref == 'refs/heads/master'
     steps:
