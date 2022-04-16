@@ -72,7 +72,8 @@ export const cryptoSymbol = <T extends Record<string, string>>(newPairs: T) => {
 				  ]
 		},
 		/**
-		 *
+		 * sync with latest coinmarketcap list, can only run in server environment
+		 * please install axios to use this api
 		 * @param apiKey coinmarketcap api key
 		 */
 		sync: (apiKey: string) => {
