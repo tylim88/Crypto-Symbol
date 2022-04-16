@@ -198,7 +198,7 @@ console.log(nameLookup('LTC', { exact: true })) // Litecoin
 
 1. You can only use this api in server environment due to Coinmarketcap CORS policy.
 2. You need to install [axios](https://www.npmjs.com/package/axios) to use this api.
-3. If you added pair or modified pairs has higher priority than sync.
+3. Added pair and modified pairs have higher priority than sync, sync will not overwrite them.
 
 ```ts
 import { cryptoSymbol } from 'crypto-symbol'
@@ -212,8 +212,4 @@ sync('coinmarketcap apiKey')
 
 ## credit
 
-Crypto Symbol logo is taken from [here](https://flyclipart.com/cryptocurrency-gold-cryptocurrency-png-678000#)
-
-```
-
-```
+Crypto Symbol logo [source](https://flyclipart.com/cryptocurrency-gold-cryptocurrency-png-678000#)
