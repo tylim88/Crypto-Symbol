@@ -10,5 +10,9 @@ export const swapKeyAndValue = <T extends Record<string, string>>(obj: T) => {
 	for (const prop in obj) {
 		newObj[obj[prop] as string] = prop
 	}
-	return newObj as { [K in keyof T as T[K]]: K }
+	return newObj as SwapKeyAndValue<T>
+}
+
+export type SwapKeyAndValue<T extends Record<string, string>> = {
+	[K in keyof T as T[K]]: K & string
 }

@@ -1,6 +1,6 @@
 {
 	"name": "crypto-symbol",
-	"version": "3.3.4",
+	"version": "3.4.0",
 	"description": "Provide easy conversion between crypto symbol and name",
 	"source": "src/index.ts",
 	"main": "dist/index.js",
@@ -53,12 +53,15 @@
 		"cryptoCurrency",
 		"currency",
 		"blockchain",
-		"converter"
+		"converter",
+		"ticker"
 	],
 	"devDependencies": {
 		"@types/jest": "^27.4.1",
 		"@typescript-eslint/eslint-plugin": "^5.19.0",
 		"@typescript-eslint/parser": "^5.19.0",
+		"axios": "^0.26.1",
+		"dotenv": "^16.0.0",
 		"eslint": "^8.13.0",
 		"eslint-cli": "^1.1.1",
 		"eslint-config-prettier": "^8.5.0",

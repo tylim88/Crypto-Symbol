@@ -2,6 +2,10 @@
 
 Change log
 
+## 3.4.0 17-April-2022
+
+- add `sync` api
+
 ## 3.3.0 15-April-2022
 
 - improve type definition
