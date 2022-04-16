@@ -1,6 +1,5 @@
 future works
 
-- now sync daily (but only publish if found new symbol)
+- sync daily (but only publish if found a new symbol)
 - add sync function (only work in server environment due to cors issue)
-- add mechanic to detect duplicated symbol
-- add mechanic to handle duplicated symbol
+- add mechanics to detect and handle duplicated symbols (impractical, only one edge case currently)
