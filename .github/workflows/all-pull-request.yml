@@ -14,8 +14,12 @@ jobs:
       - run: npm run lint --fix
       - run: npm run pretty-quick
       - run: npm test
+        env:
+          COINMARKETCAP_KEY: ${{ secrets.COINMARKETCAP_KEY }}
       - run: npm run build
       - run: npm run link
       - run: npm run b-tsc
       - run: npm run b-test
+        env:
+          COINMARKETCAP_KEY: ${{ secrets.COINMARKETCAP_KEY }}s
       - uses: codecov/codecov-action@v2
