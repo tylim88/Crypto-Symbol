@@ -21,5 +21,5 @@ jobs:
       - run: npm run b-tsc
       - run: npm run b-test
         env:
-          COINMARKETCAP_KEY: ${{ secrets.COINMARKETCAP_KEY }}s
+          COINMARKETCAP_KEY: ${{ secrets.COINMARKETCAP_KEY }}
       - uses: codecov/codecov-action@v2
