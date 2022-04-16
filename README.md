@@ -1,7 +1,11 @@
-# Crypto-Symbol
+<!-- markdownlint-disable MD010 -->
+<!-- markdownlint-disable MD033 -->
+<!-- markdownlint-disable MD041 -->
 
 <div align="center">
-		<h1>crypto-symbol</h1>
+<img>
+		<img src="https://raw.githubusercontent.com/tylim88/crypto-symbol/master/img/symbol.png" width="200px"/>
+		<h1>Crypto Symbol</h1>
 </div>
 
 <div align="center">
@@ -39,6 +43,13 @@
 				/>
 			</a>
 			&nbsp;
+			<a href="https://codecov.io/gh/tylim88/Crypto-Symbol" target="_blank">
+				<img
+					src="https://codecov.io/gh/tylim88/Crypto-Symbol/branch/master/graph/badge.svg"
+					alt="code coverage"
+				/>
+			</a>
+			&nbsp;
 			<a href="https://github.com/tylim88/crypto-symbol/issues" target="_blank">
 				<img
 					alt="GitHub issues"
@@ -61,7 +72,7 @@
 
 📔 Source: [CoinMarketCap](https://coinmarketcap.com)
 
-🔔 Almost 5000 pair to search for, with typescript const assertion.
+🔔 Almost 5000 pairs to search for, with typescript const assertion.
 
 💪 Can add your own custom name-symbol pair.
 
@@ -71,11 +82,11 @@
 
 ✍️ Written in ES6️⃣ and compiled to ES5️⃣
 
-🥰 0 dependency.
+🥰 0 dependencies.
 
 ⛲️ Out of box typescript support.
 
-🦺 Development code, built code and published code are tested in CI.
+🦺 Development code, built code, and published code are all tested in CI.
 
 ## Regarding 3.3.0
 
@@ -162,3 +173,7 @@ console.log(nameLookup('  Ltc   ', { exact: true })) // undefined
 console.log(nameLookup('Ltc', { exact: true })) // undefined
 console.log(nameLookup('LTC', { exact: true })) // Litecoin
 ```
+
+## credit
+
+Crypto Symbol logo is taken from [here](https://flyclipart.com/cryptocurrency-gold-cryptocurrency-png-678000#)
