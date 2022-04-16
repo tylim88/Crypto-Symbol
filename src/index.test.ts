@@ -2,12 +2,12 @@ import { cryptoSymbol } from './index'
 import { symbolLookupObject } from './0_constants'
 import { swapKeyAndValue } from './0_utils'
 
+const pairs = cryptoSymbol({
+	newCoin: 'NCKLNP' as const,
+	XRP: 'XRPP' as const,
+})
 describe('test with < {newCoin: NCKLNP} > ', () => {
-	const pairs = cryptoSymbol({
-		newCoin: 'NCKLNP' as const,
-		XRP: 'XRPP' as const,
-	})
-	it('check new pair', () => {
+	it('check new pair', async () => {
 		expect(pairs.get().NSPair).toEqual({
 			...symbolLookupObject,
 			newCoin: 'NCKLNP',
@@ -20,8 +20,12 @@ describe('test with < {newCoin: NCKLNP} > ', () => {
 				XRP: 'XRPP',
 			})
 		)
+		await pairs.sync(process.env.COINMARKETCAP_KEY as string)
+		expect(pairs.get().NSPair.newCoin).toEqual('NCKLNP')
+		expect(pairs.get().SNPair.NCKLNP).toEqual('newCoin')
 	})
-	it('name lookup', () => {
+	it('name lookup', async () => {
+		await pairs.sync(process.env.COINMARKETCAP_KEY as string)
 		const nameLookup = pairs.nameLookup
 		expect(nameLookup('notExist')).toEqual(undefined)
 		expect(nameLookup('NCKLNP')).toEqual('newCoin')
@@ -37,7 +41,8 @@ describe('test with < {newCoin: NCKLNP} > ', () => {
 		expect(nameLookup('Ltc', { exact: true })).toEqual(undefined)
 		expect(nameLookup('LTC', { exact: true })).toEqual('Litecoin')
 	})
-	it('symbol lookup', () => {
+	it('symbol lookup', async () => {
+		await pairs.sync(process.env.COINMARKETCAP_KEY as string)
 		const symbolLookup = pairs.symbolLookup
 		expect(symbolLookup('notExist')).toEqual(undefined)
 		expect(symbolLookup('newcoin')).toEqual('NCKLNP')

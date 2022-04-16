@@ -64,6 +64,25 @@
 				/>
 			</a>
 			&nbsp;
+			<a
+				href="https://lgtm.com/projects/g/tylim88/Crypto-Symbol/alerts/"
+				target="_blank"
+			>
+				<img
+					alt="Total alerts"
+					src="https://img.shields.io/lgtm/alerts/g/tylim88/Crypto-Symbol.svg?logo=lgtm&logoWidth=18"
+				/>
+			</a>
+			&nbsp;
+			<a
+				href="https://lgtm.com/projects/g/tylim88/Crypto-Symbol/context:javascript"
+				target="_blank"
+			>
+				<img
+					alt="Language grade: JavaScript"
+					src="https://img.shields.io/lgtm/grade/javascript/g/tylim88/Crypto-Symbol.svg?logo=lgtm&logoWidth=18"
+				/>
+			</a>
 
 </div>
 <br/>
@@ -118,14 +137,15 @@ console.log(get().NSPair) // {Bitcoin: 'BTC',Ethereum: 'ETH','Binance Coin': 'BN
 console.log(get().SNPair) // {BTC: 'Bitcoin',ETH: 'Ethereum','BNB': 'Binance Coin',......}
 ```
 
-⚒ Add new pair
+⚒ Add new pair or modify existing pair
 
 ```ts
 import { cryptoSymbol } from 'crypto-symbol'
 
 // will overwrite existing pair and add new type to pairs object
 const { get, nameLookup, symbolLookup } = cryptoSymbol({
-	newCoin: 'NC123' as const,
+	newCoin: 'NC123' as const, // add new coin
+	bitcoin: 'BTC' as const, // modify existing coin
 }) // use const assertion to narrow down the type
 ```
 
@@ -174,6 +194,26 @@ console.log(nameLookup('Ltc', { exact: true })) // undefined
 console.log(nameLookup('LTC', { exact: true })) // Litecoin
 ```
 
+🍀 Sync
+
+1. You can only use this api in server environment due to Coinmarketcap CORS policy.
+2. You need to install [axios](https://www.npmjs.com/package/axios) to use this api.
+3. If you added pair or modified pairs has higher priority than sync.
+
+```ts
+import { cryptoSymbol } from 'crypto-symbol'
+
+const { sync } = cryptoSymbol({})
+
+// sync with latest coinmarketcap list
+// this is a promise
+sync('coinmarketcap apiKey')
+```
+
 ## credit
 
 Crypto Symbol logo is taken from [here](https://flyclipart.com/cryptocurrency-gold-cryptocurrency-png-678000#)
+
+```
+
+```

@@ -1,9 +1,5 @@
-import { symbolLookupObject } from './0_constants'
-import {
-	swapKeyAndValue,
-	trimAndLowerKeyCase,
-	onlyAlphaNumeric,
-} from './0_utils'
+import { assignValueToPairsObj, onlyAlphaNumeric } from './0_utils'
+import { sync } from './1_sync'
 
 //* this should be the correct type, however this type too long due to union, not much info can be found other than https://stackoverflow.com/questions/68463963/typescript-the-inferred-type-of-this-node-exceeds-the-maximum-length-the-compi
 // type ori = typeof symbolLookupObject
@@ -20,18 +16,14 @@ import {
 // 		: ori & T
 
 /** this function add new pair and create lookup methods
- * @param {object} newPair add new pair of crypto symbol { name:symbol }, place {} if no new pair to add
+ * @param newPairs add new pair of crypto symbol { name:symbol }, place {} if no new pair to add
  * @returns methods
  */
 
-export const cryptoSymbol = <T extends Record<string, string>>(newPair: T) => {
-	const NSPair: Omit<typeof symbolLookupObject, keyof T> & T = {
-		...symbolLookupObject,
-		...newPair,
-	}
-	const SNPair = swapKeyAndValue(NSPair)
-	const SNPairTrimmed = trimAndLowerKeyCase(SNPair as Record<string, string>)
-	const NSPairTrimmed = trimAndLowerKeyCase(NSPair)
+export const cryptoSymbol = <T extends Record<string, string>>(newPairs: T) => {
+	const pairsObj = {}
+	const pairsObjWithNewType = assignValueToPairsObj(pairsObj, newPairs)
+
 	return {
 		/** this function return all pairs object
 		 * @returns {
@@ -40,8 +32,8 @@ export const cryptoSymbol = <T extends Record<string, string>>(newPair: T) => {
 		}
 		 */
 		get: () => ({
-			NSPair,
-			SNPair,
+			NSPair: pairsObjWithNewType.NSPair,
+			SNPair: pairsObjWithNewType.SNPair,
 		}),
 		/** this function search name based on the input symbol
 		 * @param symbolString symbol that you want to search name for
@@ -56,8 +48,10 @@ export const cryptoSymbol = <T extends Record<string, string>>(newPair: T) => {
 			}
 		) => {
 			return config.exact
-				? (SNPair as { [index: string]: string })[symbolString]
-				: SNPairTrimmed[onlyAlphaNumeric(symbolString, config.allow)]
+				? pairsObjWithNewType.SNPair[symbolString]
+				: pairsObjWithNewType.SNPairTrimmed[
+						onlyAlphaNumeric(symbolString, config.allow)
+				  ]
 		},
 		/** this function search symbol based on the input name
 		 * @param nameString name that you want to search symbol for
@@ -72,8 +66,18 @@ export const cryptoSymbol = <T extends Record<string, string>>(newPair: T) => {
 			}
 		): string | undefined => {
 			return config.exact
-				? NSPair[nameString]
-				: NSPairTrimmed[onlyAlphaNumeric(nameString, config.allow)]
+				? pairsObjWithNewType.NSPair[nameString]
+				: pairsObjWithNewType.NSPairTrimmed[
+						onlyAlphaNumeric(nameString, config.allow)
+				  ]
+		},
+		/**
+		 * sync with latest coinmarketcap list, can only run in server environment
+		 * please install axios to use this api
+		 * @param apiKey coinmarketcap api key
+		 */
+		sync: (apiKey: string) => {
+			return sync(apiKey, pairsObj, newPairs)
 		},
 	}
 }
