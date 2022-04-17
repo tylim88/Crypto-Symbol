@@ -115,9 +115,7 @@ npm i crypto-symbol
 
 ## Usage
 
-**If duplicated names or symbols are found in the CoinMarketCap list, the library keep only the one with higher rank(larger market cap). This check is case-insensitive.**
-
-If you need coins with lower rank, you can add it yourself, keep in mind to use unique name and unique symbol for them.
+**If duplicated names or symbols are found in the CoinMarketCap list, the library keep only the one with higher rank(larger market cap). This check is case-insensitive. If you need coins with lower rank, you can add it yourself, keep in mind to use unique name and unique symbol for them.**
 
 🎵 Get Pairs Object
 
