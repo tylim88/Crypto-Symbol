@@ -12,7 +12,7 @@
 	"license": "ISC",
 	"dependencies": {
 		"codeForDoc": "file:",
-		"crypto-symbol": "^3.4.0"
+		"crypto-symbol": "latest"
 	},
 	"devDependencies": {
 		"@types/jest": "^27.0.2",
