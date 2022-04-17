@@ -97,7 +97,7 @@
 
 🌟 Optimized lookup time.
 
-🆙 last coin list update: 7-April-22.
+🆙 update daily(only publish new package if there is change).
 
 ✍️ Written in ES6️⃣ and compiled to ES5️⃣
 
