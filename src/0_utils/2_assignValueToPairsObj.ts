@@ -9,8 +9,8 @@ type AddNewPairs<T extends Record<string, string>> = Omit<
 	T
 
 export type PairsObj<T extends Record<string, string>> = {
-	NSPair: AddNewPairs<T> & Record<string, string>
-	SNPair: SwapKeyAndValue<AddNewPairs<T>> & Record<string, string>
+	NSPair: AddNewPairs<T> & Record<string, string | undefined>
+	SNPair: SwapKeyAndValue<AddNewPairs<T>> & Record<string, string | undefined>
 	SNPairTrimmed: Record<string, string>
 	NSPairTrimmed: Record<string, string>
 }

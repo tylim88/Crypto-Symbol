@@ -6,17 +6,17 @@ import path from 'path'
 export const updateConstant = async () => {
 	const data = await fetch(process.env.COINMARKETCAP_KEY as string)
 	const code =
+		`export const symbolLookupObject = {` +
 		data.reduce<string>((acc, coin) => {
-			if (coin.name !== `Xeno Token` && coin.symbol !== `AOA`) {
-				acc =
-					acc +
-					`
+			acc =
+				acc +
+				`
 	[\`${coin.name}\`]: '${coin.symbol}',`
-			}
 			return acc
-		}, `export const symbolLookupObject = {`) +
+		}, '') +
 		`
-} as const`
+} as const
+`
 
 	fs.writeFileSync(path.resolve(__dirname, '../src/0_constants/index.ts'), code)
 }

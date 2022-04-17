@@ -1,13 +1,17 @@
 import { cryptoSymbol } from 'crypto-symbol'
 import { symbolLookupObject } from '../../src/0_constants'
 import { swapKeyAndValue } from '../../src/0_utils'
+import { IsSame, IsTrue } from '../../src/testHelper'
 
 const pairs = cryptoSymbol({
 	newCoin: 'NCKLNP' as const,
 	XRP: 'XRPP' as const,
 })
+const nameLookup = pairs.nameLookup
+const symbolLookup = pairs.symbolLookup
+
 describe('test with < {newCoin: NCKLNP} > ', () => {
-	it('check new pair', async () => {
+	beforeAll(async () => {
 		expect(pairs.get().NSPair).toEqual({
 			...symbolLookupObject,
 			newCoin: 'NCKLNP',
@@ -24,9 +28,7 @@ describe('test with < {newCoin: NCKLNP} > ', () => {
 		expect(pairs.get().NSPair.newCoin).toEqual('NCKLNP')
 		expect(pairs.get().SNPair.NCKLNP).toEqual('newCoin')
 	})
-	it('name lookup', async () => {
-		await pairs.sync(process.env.COINMARKETCAP_KEY as string)
-		const nameLookup = pairs.nameLookup
+	it('name lookup', () => {
 		expect(nameLookup('notExist')).toEqual(undefined)
 		expect(nameLookup('NCKLNP')).toEqual('newCoin')
 		expect(nameLookup('NCKLNP')).toEqual('newCoin')
@@ -41,9 +43,7 @@ describe('test with < {newCoin: NCKLNP} > ', () => {
 		expect(nameLookup('Ltc', { exact: true })).toEqual(undefined)
 		expect(nameLookup('LTC', { exact: true })).toEqual('Litecoin')
 	})
-	it('symbol lookup', async () => {
-		await pairs.sync(process.env.COINMARKETCAP_KEY as string)
-		const symbolLookup = pairs.symbolLookup
+	it('symbol lookup', () => {
 		expect(symbolLookup('notExist')).toEqual(undefined)
 		expect(symbolLookup('newcoin')).toEqual('NCKLNP')
 		expect(symbolLookup('newCoin')).toEqual('NCKLNP')
@@ -58,5 +58,15 @@ describe('test with < {newCoin: NCKLNP} > ', () => {
 		expect(symbolLookup('  liT ec @oin  ', { exact: true })).toEqual(undefined)
 		expect(symbolLookup('litecoin', { exact: true })).toEqual(undefined)
 		expect(symbolLookup('Litecoin', { exact: true })).toEqual('LTC')
+	})
+	it('test duplication', () => {
+		expect(nameLookup('XNO')).toEqual('Nano')
+		expect(symbolLookup('Nano')).toEqual('XNO')
+	})
+	it('test type', () => {
+		const BTC = pairs.get().NSPair.Bitcoin
+		const possiblyUndefined = pairs.get().NSPair.notExist
+		IsTrue<IsSame<typeof BTC, 'BTC'>>()
+		IsTrue<IsSame<typeof possiblyUndefined, string | undefined>>()
 	})
 })

@@ -1,4 +1,4 @@
-import { fetch } from './0_fetch'
+import { fetch } from './1_fetch'
 import { assignValueToPairsObj } from '../0_utils'
 
 /**
@@ -15,10 +15,7 @@ export const sync = async (
 ) => {
 	const data = await fetch(apiKey)
 	const newData = data.reduce<Record<string, string>>((acc, coin) => {
-		// edge case https://github.com/tylim88/Crypto-Symbol/issues/16
-		if (coin.name !== 'Xeno Token' && coin.symbol !== 'AOA') {
-			acc[coin.name] = coin.symbol
-		}
+		acc[coin.name] = coin.symbol
 		return acc
 	}, {})
 	assignValueToPairsObj(pairsObj, { ...newData, ...newPairs })
