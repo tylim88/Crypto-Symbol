@@ -2,6 +2,11 @@
 
 Change log
 
+## 3.4.2 17-April-2022
+
+- fix `Xeno Token` edge case bug in sync
+- ci now make sure the published code test use the version published just now
+
 ## 3.4.0 17-April-2022
 
 - add `sync` api

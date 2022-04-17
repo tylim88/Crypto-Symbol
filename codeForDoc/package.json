@@ -1,5 +1,5 @@
 {
-	"name": "endtoendtest",
+	"name": "codeForDoc",
 	"version": "1.0.0",
 	"description": "test published Firelordjs",
 	"main": "index.js",
@@ -11,7 +11,8 @@
 	"author": "",
 	"license": "ISC",
 	"dependencies": {
-		"crypto-symbol": "latest"
+		"codeForDoc": "file:",
+		"crypto-symbol": "^3.4.0"
 	},
 	"devDependencies": {
 		"@types/jest": "^27.0.2",
