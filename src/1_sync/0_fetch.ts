@@ -6,17 +6,10 @@ import axios from 'axios'
  */
 export const fetch = async (apiKey: string) => {
 	const res = await axios(
-		'https://pro-api.coinmarketcap.com/v1/cryptocurrency/listings/latest',
+		'https://pro-api.coinmarketcap.com/v1/cryptocurrency/listings/latest?limit=5000',
 		{ headers: { 'X-CMC_PRO_API_KEY': apiKey } }
 	)
-	const data = res.data.data as Data
-	return data.reduce<Record<string, string>>((acc, coin) => {
-		// edge case https://github.com/tylim88/Crypto-Symbol/issues/16
-		if (coin.symbol !== 'Xeno Token') {
-			acc[coin.name] = coin.symbol
-		}
-		return acc
-	}, {})
+	return res.data.data as Data
 }
 
 type Data = { name: string; symbol: string }[]

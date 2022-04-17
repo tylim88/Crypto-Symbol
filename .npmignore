@@ -11,7 +11,7 @@
 /.opensource
 /.husky
 /img
-/updateScript
+/scripts
 
 # ignore file
 .gitignore

@@ -4,6 +4,6 @@
 const sharedConfig = require('./jest.config.js')
 module.exports = {
 	...sharedConfig,
-	roots: ['<rootDir>/codeForDoc', '<rootDir>/updateScript'],
+	roots: ['<rootDir>/codeForDoc', '<rootDir>/scripts'],
 	collectCoverage: false,
 }
