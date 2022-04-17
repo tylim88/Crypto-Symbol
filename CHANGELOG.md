@@ -2,6 +2,10 @@
 
 Change log
 
+## 3.4.3 17-April-2022
+
+- axios now import dynamically
+
 ## 3.4.2 17-April-2022
 
 - fix `Xeno Token` edge case bug in sync
