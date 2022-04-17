@@ -21,6 +21,7 @@
 		"build": "rm -rf dist && tsc",
 		"link": "npm link && npm link crypto-symbol",
 		"generate": "ts-node --project tsconfig.doc.json scripts/generate.ts",
+		"auto-update": "npm run generate && git add . && git commit --no-verify -m \"update list\" && git push",
 		"dev": "---------------------dev------------------------",
 		"d-link": "npm run build && npm run link",
 		"d-test": "tsc && npm test",
