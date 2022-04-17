@@ -1,6 +1,6 @@
 {
 	"name": "crypto-symbol",
-	"version": "3.4.6",
+	"version": "3.5.0",
 	"description": "Provide easy conversion between crypto symbol and name",
 	"source": "src/index.ts",
 	"main": "dist/index.js",
@@ -20,7 +20,7 @@
 		"parcel": "rm -rf dist && tsc --emitDeclarationOnly true && parcel build",
 		"build": "rm -rf dist && tsc",
 		"link": "npm link && npm link crypto-symbol",
-		"run": "ts-node --project tsconfig.doc.json scripts/script.ts",
+		"generate": "ts-node --project tsconfig.doc.json scripts/generate.ts",
 		"dev": "---------------------dev------------------------",
 		"d-link": "npm run build && npm run link",
 		"d-test": "tsc && npm test",
@@ -78,6 +78,7 @@
 		"shelljs": "^0.8.5",
 		"ts-jest": "^27.1.4",
 		"ts-node": "^10.7.0",
-		"typescript": "^4.6.3"
+		"typescript": "^4.6.3",
+		"zod": "^3.14.4"
 	}
 }

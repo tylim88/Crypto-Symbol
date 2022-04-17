@@ -2,6 +2,12 @@
 
 Change log
 
+## 3.5.0 17-April-2022
+
+- If there is duplicated name or symbol, keep only the one with higher rank(larger market cap). This check is case-insensitive.
+- improve typing.
+- add more tests.
+
 ## 3.4.3 17-April-2022
 
 - axios now import dynamically

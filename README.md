@@ -97,7 +97,7 @@
 
 🌟 Optimized lookup time.
 
-🆙 last coin list update: 13-Oct-21.
+🆙 last coin list update: 7-April-22.
 
 ✍️ Written in ES6️⃣ and compiled to ES5️⃣
 
@@ -107,16 +107,6 @@
 
 🦺 Development code, built code, and published code are all tested in CI.
 
-## Regarding 3.3.0
-
-The new `Nano` symbol ticker symbol is `XNO` which is conflict with the `Xeno Token` symbol.
-
-I believe this is the only edge case as ticker has to be unique, not sure why `Nano` violate it.
-
-Since there is only one edge case, I decide to sacrifice `Xeno Token` because it is not well known, `Xeno Token` no longer in the list.
-
-If you think a future-proof solution is needed, open an issue and justify it, then I will consider put more effort on it.
-
 ## Installation
 
 ```bash
@@ -124,6 +114,10 @@ npm i crypto-symbol
 ```
 
 ## Usage
+
+**If duplicated names or symbols are found in the CoinMarketCap list, the library keep only the one with higher rank(larger market cap). This check is case-insensitive.**
+
+If you need coins with lower rank, you can add it yourself, keep in mind to use unique name and unique symbol for them.
 
 🎵 Get Pairs Object
 
