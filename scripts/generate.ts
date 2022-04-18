@@ -45,3 +45,5 @@ export const updateConstant = async () => {
 		)
 	}
 }
+
+updateConstant()
