@@ -1,6 +1,6 @@
 {
 	"name": "crypto-symbol",
-	"version": "3.5.6",
+	"version": "3.5.4",
 	"description": "Provide easy conversion between crypto symbol and name",
 	"source": "src/index.ts",
 	"main": "dist/index.js",
@@ -21,7 +21,8 @@
 		"build": "rm -rf dist && tsc",
 		"link": "npm link && npm link crypto-symbol",
 		"generate": "ts-node --project tsconfig.doc.json scripts/generate.ts",
-		"auto-update": "git pull && npm run generate && npm run pretty-quick && git add . && git commit --no-verify -m \"update list\" && git push",
+		"update": "git pull && npm run generate && npm run pretty-quick && git add . && git commit --no-verify -m \"update list\" && git push",
+		"cron": "ts-node --project tsconfig.doc.json scripts/cron.ts",
 		"dev": "---------------------dev------------------------",
 		"d-link": "npm run build && npm run link",
 		"d-test": "tsc && npm test",
@@ -59,11 +60,13 @@
 		"ticker"
 	],
 	"devDependencies": {
+		"@types/cron": "^1.7.3",
 		"@types/jest": "^27.4.1",
 		"@types/shelljs": "^0.8.11",
 		"@typescript-eslint/eslint-plugin": "^5.19.0",
 		"@typescript-eslint/parser": "^5.19.0",
 		"axios": "^0.26.1",
+		"cron": "^1.8.2",
 		"deep-object-diff": "^1.1.7",
 		"dotenv": "^16.0.0",
 		"eslint": "^8.13.0",
