@@ -2,7 +2,7 @@ import shell from 'shelljs'
 import cron from 'cron'
 
 const job = new cron.CronJob(
-	'0 0 * * * *',
+	'0 0 0 * * *',
 	() => {
 		try {
 			shell.exec(`npm run update`)
