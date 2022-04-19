@@ -194,12 +194,13 @@ console.log(nameLookup('LTC', { exact: true })) // Litecoin
 
 ```ts
 import { cryptoSymbol } from 'crypto-symbol'
+import axios from 'axios'
 
 const { sync } = cryptoSymbol({})
 
 // sync with latest coinmarketcap list
 // this is a promise
-sync('coinmarketcap apiKey')
+sync('coinmarketcap apiKey', axios)
 ```
 
 ## credit

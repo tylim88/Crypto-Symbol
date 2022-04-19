@@ -7,10 +7,12 @@ import pkg from '../package.json'
 import bumpVersion from 'semver-increment'
 import { diff } from 'deep-object-diff'
 import { symbolLookupObject } from '../src/0_constants'
+import axios from 'axios'
+
 const masks = [0, 0, 1]
 
 export const updateConstant = async () => {
-	const data = await fetch(process.env.COINMARKETCAP_KEY as string)
+	const data = await fetch(axios, process.env.COINMARKETCAP_KEY as string)
 	const newSymbolLookupObject = data.reduce<Record<string, string>>(
 		(acc, coin) => {
 			acc[coin.name] = coin.symbol

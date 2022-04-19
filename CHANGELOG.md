@@ -2,6 +2,10 @@
 
 Change log
 
+## 3.5.15 19-April-2022
+
+- now `axios` is a parameter instead of a dynamic module
+
 ## 3.5.0 17-April-2022
 
 - If there is duplicated name or symbol, keep only the one with higher rank(larger market cap). This check is case-insensitive.

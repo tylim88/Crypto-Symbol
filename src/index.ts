@@ -1,5 +1,5 @@
 import { assignValueToPairsObj, onlyAlphaNumeric } from './0_utils'
-import { sync } from './1_sync'
+import { sync, AxiosStatic } from './1_sync'
 
 //* this should be the correct type, however this type too long due to union, not much info can be found other than https://stackoverflow.com/questions/68463963/typescript-the-inferred-type-of-this-node-exceeds-the-maximum-length-the-compi
 // type ori = typeof symbolLookupObject
@@ -76,8 +76,8 @@ export const cryptoSymbol = <T extends Record<string, string>>(newPairs: T) => {
 		 * please install axios to use this api
 		 * @param apiKey coinmarketcap api key
 		 */
-		sync: (apiKey: string) => {
-			return sync(apiKey, pairsObj, newPairs)
+		sync: (apiKey: string, axios: AxiosStatic) => {
+			return sync(axios, apiKey, pairsObj, newPairs)
 		},
 	}
 }
