@@ -99,8 +99,6 @@
 
 🆙 update daily(only publish new package if there is change).
 
-✍️ Written in ES6️⃣ and compiled to ES5️⃣
-
 🥰 0 dependencies.
 
 ⛲️ Out of box typescript support.
@@ -125,8 +123,8 @@ import { cryptoSymbol } from 'crypto-symbol'
 const { get } = cryptoSymbol({})
 
 // all the pair objects are properly typed with const assertion
-console.log(get().NSPair) // {Bitcoin: 'BTC',Ethereum: 'ETH','Binance Coin': 'BNB',......}
-console.log(get().SNPair) // {BTC: 'Bitcoin',ETH: 'Ethereum','BNB': 'Binance Coin',......}
+get().NSPair // {Bitcoin: 'BTC',Ethereum: 'ETH','Binance Coin': 'BNB',......}
+get().SNPair // {BTC: 'Bitcoin',ETH: 'Ethereum','BNB': 'Binance Coin',......}
 ```
 
 ⚒ Add new pair or modify existing pair
@@ -150,18 +148,18 @@ const { symbolLookup } = cryptoSymbol({})
 
 // case insensitive
 // ignore all special character and space
-console.log(symbolLookup('  liT ec @oin  ')) // "LTC"
-console.log(symbolLookup(' τbITcO in ')) // BTC
+symbolLookup('  liT ec @oin  ') // "LTC"
+symbolLookup(' τbITcO in ') // BTC
 
 // case insensitive
 // can allow specific special character
 // to allow multiple special character, simply concat all the character, eg "#$%)("
-console.log(symbolLookup(' τbITcO in ', { allow: 'τ' })) // TBTC
+symbolLookup(' τbITcO in ', { allow: 'τ' }) // TBTC
 
 // exact match (case sensitive)
-console.log(symbolLookup('  liT ec @oin  ', { exact: true })) // undefined
-console.log(symbolLookup('litecoin', { exact: true })) // "undefined"
-console.log(symbolLookup('Litecoin', { exact: true })) // "LTC"
+symbolLookup('  liT ec @oin  ', { exact: true }) // undefined
+symbolLookup('litecoin', { exact: true }) // "undefined"
+symbolLookup('Litecoin', { exact: true }) // "LTC"
 ```
 
 ⚡️ Name Lookup
@@ -173,17 +171,17 @@ const { nameLookup } = cryptoSymbol({})
 
 // case insensitive
 // ignore all special character and space)
-console.log(nameLookup('  @Ltc!   ')) // "Litecoin"
+nameLookup('  @Ltc!   ') // "Litecoin"
 
 // can allow specific special character
 // to allow multiple special character, simply concat all the character, eg "#$%)("
 // all symbol are alphanumeric anyway, I don't think you will need it
-console.log(nameLookup('  @Ltc!   '), { allow: '@' }) // undefined, because symbol "@Ltc" does not exist
+nameLookup('  @Ltc!   ', { allow: '@' }) // undefined, because symbol "@Ltc" does not exist
 
 // exact match (case sensitive)
-console.log(nameLookup('  Ltc   ', { exact: true })) // undefined
-console.log(nameLookup('Ltc', { exact: true })) // undefined
-console.log(nameLookup('LTC', { exact: true })) // Litecoin
+nameLookup('  Ltc   ', { exact: true }) // undefined
+nameLookup('Ltc', { exact: true }) // undefined
+nameLookup('LTC', { exact: true }) // Litecoin
 ```
 
 🍀 Sync

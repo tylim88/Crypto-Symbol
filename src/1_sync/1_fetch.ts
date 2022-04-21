@@ -2,6 +2,7 @@ import { keepOnlyHigherRank, Data } from './0_keepOnlyHigherRank'
 import { AxiosStatic } from './axios'
 /**
  *
+ * @param axios axios default export
  * @param apiKey coinmarketcap api key
  * @returns processed string
  */
