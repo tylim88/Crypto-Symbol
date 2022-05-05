@@ -1,6 +1,6 @@
 {
 	"name": "crypto-symbol",
-	"version": "3.5.33",
+	"version": "3.5.34",
 	"description": "Provide easy conversion between crypto symbol and name",
 	"source": "src/index.ts",
 	"main": "dist/index.js",
