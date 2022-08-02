@@ -13,8 +13,19 @@ jobs:
           cache-dependency-path: '**/package-lock.json'
           registry-url: 'https://registry.npmjs.org'
       - run: npm i
+      - run: npm run lint --fix
+      - run: npm run pretty-quick
+      - run: npm test
+        env:
+          COINMARKETCAP_KEY: ${{ secrets.COINMARKETCAP_KEY }}
       - run: npm run build
-      - run: npm publish
+      - run: npm run link
+      - run: npm run b-tsc
+      - run: npm run b-test
+        env:
+          COINMARKETCAP_KEY: ${{ secrets.COINMARKETCAP_KEY }}
+      - uses: codecov/codecov-action@v2
+      - run: npm publish || true
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
       - run: npm run p-reinstall
