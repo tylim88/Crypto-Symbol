@@ -97,7 +97,7 @@
 
 🌟 Optimized lookup time.
 
-🆙 update daily(only publish new package if there is change).
+🆙 Check for update daily and publish new version if there is change.
 
 🥰 0 dependencies.
 
@@ -113,7 +113,7 @@ npm i crypto-symbol
 
 ## Usage
 
-**If duplicated names or symbols are found in the CoinMarketCap list, the library keep only the one with higher rank(larger market cap). This check is case-insensitive. If you need coins with lower rank, you can add it yourself, keep in mind to use unique name and unique symbol for them.**
+**Normally ticker symbol is [unique](https://coinmarketcap.com/alexandria/glossary/ticker-symbol), but for whatever reason on very rare occasional, CMC take in new coin that has the same ticker symbol. If duplicated names or symbols are found in the CoinMarketCap list, the library keep only the one with higher rank(larger market cap). This check is case-insensitive. If you need coins with lower rank, you can add it yourself, keep in mind to use unique name and unique symbol for them.**
 
 🎵 Get Pairs Object
 
@@ -186,9 +186,13 @@ nameLookup('LTC', { exact: true }) // Litecoin
 
 🍀 Sync
 
+Sync the coin by yourself.
+
 1. You can only use this api in server environment due to Coinmarketcap CORS policy.
 2. You need to install [axios](https://www.npmjs.com/package/axios) to use this api.
 3. Added pair and modified pairs have higher priority than sync, sync will not overwrite them.
+
+Note: The library does not dynamically import `axios` because tooling like Vite does not support dynamic import out of the box, see this [issue](https://github.com/tylim88/Crypto-Symbol/issues/41).
 
 ```ts
 import { cryptoSymbol } from 'crypto-symbol'
@@ -201,6 +205,6 @@ const { sync } = cryptoSymbol({})
 sync('coinmarketcap apiKey', axios)
 ```
 
-## credit
+## Credit
 
 Crypto Symbol logo [source](https://flyclipart.com/cryptocurrency-gold-cryptocurrency-png-678000#)
