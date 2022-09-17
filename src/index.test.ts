@@ -54,6 +54,7 @@ describe('test with < {newCoin: NCKLNP} > ', () => {
 		expect(symbolLookup('newCoin', { exact: true })).toEqual('NCKLNP')
 		expect(symbolLookup('new2Coin', { exact: true })).toEqual(undefined)
 		expect(symbolLookup(' bITcO in ')).toEqual('BTC')
+		expect(symbolLookup("bitcoin'")).toEqual('BTC')
 		expect(symbolLookup('  liT ec @oin  ')).toEqual('LTC')
 		expect(symbolLookup('  liT ec @oin  ', { exact: true })).toEqual(undefined)
 		expect(symbolLookup('litecoin', { exact: true })).toEqual(undefined)

@@ -1,6 +1,6 @@
 {
 	"name": "crypto-symbol",
-	"version": "3.5.166",
+	"version": "3.5.167",
 	"description": "Provide easy conversion between crypto symbol and name",
 	"source": "src/index.ts",
 	"main": "dist/index.js",
@@ -23,6 +23,8 @@
 		"generate": "ts-node --project tsconfig.doc.json scripts/generate.ts",
 		"update": "git pull && npm run reinstall && npm run generate && npm run pretty-quick && git add . && git commit --no-verify -m \"update list\" && git push",
 		"cron": "ts-node --project tsconfig.doc.json scripts/cron.ts",
+		"jest": "jest src/index.test.ts",
+		"commit": "git commit --no-verify",
 		"dev": "---------------------dev------------------------",
 		"d-link": "npm run build && npm run link",
 		"d-test": "tsc && npm test",

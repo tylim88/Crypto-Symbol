@@ -205,6 +205,10 @@ const { sync } = cryptoSymbol({})
 sync('coinmarketcap apiKey', axios)
 ```
 
+## Use Case Example
+
+- [Possible to look for multiple tickers in string?](https://github.com/tylim88/Crypto-Symbol/issues/49)
+
 ## Credit
 
 Crypto Symbol logo [source](https://flyclipart.com/cryptocurrency-gold-cryptocurrency-png-678000#)
