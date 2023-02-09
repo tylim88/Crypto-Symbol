@@ -15,13 +15,13 @@
 		"reinstall": "rm -rf node_modules && rm -rf package-lock.json && npm i && npx husky install",
 		"tsc": "tsc",
 		"lint": "eslint . --ext .ts --fix",
-		"pretty-quick": "pretty-quick --stage",
+		"pretty": "pretty-quick --stage",
 		"test": "rm -rf coverage && jest --forceExit",
 		"parcel": "rm -rf dist && tsc --emitDeclarationOnly true && parcel build",
 		"build": "rm -rf dist && tsc",
 		"link": "npm link && npm link crypto-symbol",
 		"generate": "ts-node --project tsconfig.doc.json scripts/generate.ts",
-		"update": "git pull && npm run reinstall && npm run generate && npm run pretty-quick && git add . && git commit --no-verify -m \"update list\" && git push",
+		"update": "git pull && npm run reinstall && npm run generate && npm run pretty && git add . && git commit --no-verify -m \"update list\" && git push",
 		"cron": "ts-node --project tsconfig.doc.json scripts/cron.ts",
 		"jest": "jest src/index.test.ts",
 		"commit": "git commit --no-verify",
@@ -42,6 +42,12 @@
 	"repository": {
 		"type": "git",
 		"url": "git+https://github.com/tylim88/Crypto-Symbol.git"
+	},
+	"lint-staged": {
+		"*.{js,jsx,ts,tsx,md,json,yml}": [
+			"eslint --fix",
+			"npm run pretty"
+		]
 	},
 	"author": "",
 	"license": "MIT",
