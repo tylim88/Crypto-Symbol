@@ -2,7 +2,6 @@ import { cryptoSymbol } from './index'
 import { symbolLookupObject } from './0_constants'
 import { swapKeyAndValue } from './0_utils'
 import { IsSame, IsTrue } from './testHelper'
-import axios from 'axios'
 
 const pairs = cryptoSymbol({
 	newCoin: 'NCKLNP' as const,
@@ -25,7 +24,7 @@ describe('test with < {newCoin: NCKLNP} > ', () => {
 				XRP: 'XRPP',
 			})
 		)
-		await pairs.sync(process.env.COINMARKETCAP_KEY as string, axios)
+		await pairs.sync(process.env.COINMARKETCAP_KEY as string)
 		expect(pairs.get().NSPair.newCoin).toEqual('NCKLNP')
 		expect(pairs.get().SNPair.NCKLNP).toEqual('newCoin')
 	})

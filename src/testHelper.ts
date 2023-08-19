@@ -14,6 +14,7 @@ type UnionToIntersection<U> = (
 
 export type IsUnion<T> = [T] extends [UnionToIntersection<T>] ? false : true
 
+/* eslint-disable-next-line */
 export const IsTrue = <T extends true>() => {} // for type assertion, normally use with IsSame or IEqual
 
 // https://stackoverflow.com/questions/53807517/how-to-test-if-two-types-are-exactly-the-same

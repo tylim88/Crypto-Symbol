@@ -1,5 +1,5 @@
 import { assignValueToPairsObj, onlyAlphaNumeric } from './0_utils'
-import { sync, AxiosStatic } from './1_sync'
+import { sync } from './1_sync'
 
 /** this function add new pair and create lookup methods
  * @param newPairs add new pair of crypto symbol { name:symbol }, place {} if no new pair to add
@@ -62,7 +62,7 @@ export const cryptoSymbol = <T extends Record<string, string>>(newPairs: T) => {
 		 * please install axios to use this api
 		 * @param apiKey coinmarketcap api key
 		 */
-		sync: (apiKey: string, axios: AxiosStatic) => {
+		sync: (apiKey: string) => {
 			return sync(apiKey, pairsObj, newPairs)
 		},
 	}
