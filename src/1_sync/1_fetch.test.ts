@@ -1,9 +1,8 @@
 import { fetch } from './1_fetch'
 import { z } from 'zod'
-import axios from 'axios'
 
 it('test keep only higher rank', async () => {
-	const data = await fetch(axios, process.env.COINMARKETCAP_KEY as string)
+	const data = await fetch(process.env.COINMARKETCAP_KEY as string)
 	expect(data.length).toBeGreaterThan(1000)
 	expect(() =>
 		z

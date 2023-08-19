@@ -92,7 +92,7 @@ npm i crypto-symbol
 
 ## Usage
 
-**Normally ticker symbol is [unique](https://coinmarketcap.com/alexandria/glossary/ticker-symbol), but for whatever reason on very rare occasional, CMC take in new coin that has the same ticker symbol. If duplicated names or symbols are found in the CoinMarketCap list, the library keep only the one with higher rank(larger market cap). This check is case-insensitive. If you need coins with lower rank, you can add it yourself, keep in mind to use unique name and unique symbol for them.**
+**Normally ticker symbol is [unique](https://coinmarketcap.com/alexandria/glossary/ticker-symbol), but for whatever reason on very rare occasional, CMC lists new coin that has the same ticker symbol(case-insensitive). If duplicated names or symbols are found in the CoinMarketCap list, the library keep higher rank(larger market cap) coins. If you need lower rank coins, please can add it yourself. Keep in mind to use unique name and unique symbol for them.**
 
 🎵 Get Pairs Object
 
@@ -165,28 +165,26 @@ nameLookup('LTC', { exact: true }) // Litecoin
 
 🍀 Sync
 
-Sync the coin by yourself.
+Sync the coin manually.
 
 1. You can only use this api in server environment due to Coinmarketcap CORS policy.
-2. You need to install [axios](https://www.npmjs.com/package/axios) to use this api.
-3. Added pair and modified pairs have higher priority than sync, sync will not overwrite them.
+2. You need to install [axios](https://www.npmjs.com/package/axios) to use this api, simply installing it is enough.
 
-Note: The library does not dynamically import `axios` because tooling like Vite does not support dynamic import out of the box, see this [issue](https://github.com/tylim88/Crypto-Symbol/issues/41).
+```bash
+npm i axios
+```
+
+3. Added pairs and modified pairs have higher priority than sync, sync will not overwrite them.
 
 ```ts
 import { cryptoSymbol } from 'crypto-symbol'
-import axios from 'axios'
 
 const { sync } = cryptoSymbol({})
 
 // sync with latest coinmarketcap list
 // this is a promise
-sync('coinmarketcap apiKey', axios)
+sync('coinmarketcap apiKey')
 ```
-
-## Use Case Example
-
-- [Possible to look for multiple tickers in string?](https://github.com/tylim88/Crypto-Symbol/issues/49)
 
 ## Credit
 
